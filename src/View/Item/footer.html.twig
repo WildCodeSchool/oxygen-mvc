@@ -5,14 +5,12 @@
             data-view="!opacity-100 !scale-100">
             <h2 class="text-3xl font-bold mb-4">Inscrivez-vous</h2>
             <p class="text-lg mb-8">En vous inscrivant vous acceptez notre Politique de confidentialité afin que nous puissions traiter vos données collectées et vous proposer des contenus personnalisés.</p>
-  
-            
             <form class="relative inline-flex flex-row items-center justify-center gap-x-4 rounded font-bold text-lg tracking-[.00714em] border-2 border-black">
                 <div class="max-w-xl">
                   <div class="flex space-x-4">
                     <div class="flex rounded-md overflow-hidden w-full">
-                      <input type="text" class="p-2 w-full rounded-md rounded-r-none text-black" placeholder="Your Email"/>
-                      <button class="bg-blue-400 text-white px-6 text-lg font-semibold py-4 rounded-r-md">Soumettre</button>
+                        <input type="text" class="p-2 w-full rounded-md rounded-r-none text-black" placeholder="Your Email"/>
+                        <button class="bg-blue-400 text-white px-6 text-lg font-semibold py-4 rounded-r-md">Soumettre</button>
                     </div>
                   </div>
                 </div>
@@ -21,13 +19,45 @@
         </div>
     </section>
     <div class="container px-4 lg:px-8 mx-auto">
-        <div class="flex flex-col max-md:text-center md:flex-row max-md:justify-center gap-8 md:justify-between">
-          <nav class="flex flex-col sm:flex-row max-md:mx-auto">
-            <a href="#" class="max-sm:py-2 px-2">Privacy Policy</a>
-            <a href="#" class="max-sm:py-2 px-2">Terms of Use</a>
-            <a href="#" class="max-sm:py-2 px-2">Guideline</a>
-          </nav>
-          <p>Laser &copy; 2024 | For contacting us: <a href="mailto:{{contactEmail}}">{{ contactEmail }}</a></p>
+        <div class="flex flex-col max-md:text-center md:flex-row max-md:justify-center gap-8 md:justify-around">
+            <div class="grid grid-1">
+                <div class="flex justify-center mb-5">
+                    <img src="/assets/images/oxygen-logo.png" alt="logo" class="h-30">
+                </div>
+                <p>SUIVEZ-NOUS SUR</p>
+                <div class="mt-5 flex justify-center text-blue-400">
+                    <a href="#" class="max-sm:py-2 px-2"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="max-sm:py-2 px-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="max-sm:py-2 px-2"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="max-sm:py-2 px-2">
+                <p>Oxygen School</p>
+                <ul class="mt-5 space-y-4 text-xs">
+                    <li><a href="#" class="transition hover:opacity-50">À propos</a></li>
+                    <li><a href="#" class="transition hover:opacity-50">Contact</a></li>
+                    <li><a href="#" class="transition hover:opacity-50">Recrutements</a></li>
+                    <li><a href="#" class="transition hover:opacity-50">Blog</a></li>
+                </ul>
+            </div>
+            <div class="max-sm:py-2 px-2">
+                <p>Nos disciplines</p>
+                <ul class="mt-5 space-y-4 text-xs">
+                    <li><a href="#" class="transition hover:opacity-50">Informatique</a></li>
+                    <li><a href="#" class="transition hover:opacity-50">Finance</a></li>
+                    <li><a href="#" class="transition hover:opacity-50">Design</a></li>
+                    <li><a href="#" class="transition hover:opacity-50">Marketing</a></li>
+                    <li><a href="#" class="transition hover:opacity-50">Santé</a></li>
+                </ul>
+            </div>
+            <div class="max-sm:py-2 px-2">
+                <p>Nos campus</p>
+                <ul class="mt-5 space-y-4 text-xs">
+                    <li><a href="#" class="transition hover:opacity-50">Paris</a></li>
+                    <li><a href="#" class="transition hover:opacity-50">Lille</a></li>
+                    <li><a href="#" class="transition hover:opacity-50">Toulouse</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </div>
 </footer>
