@@ -1,0 +1,41 @@
+{# src/View/Items/navbar.html.twig #}
+<header
+    class="fixed inset-x-0 z-40 top-0 bg-white text-black h-[96px] py-5 lg:py-6 border-t-2 border-b-2 border-black">
+    <div class="container px-4 lg:px-8 mx-auto flex justify-between items-center">
+      <div class="text-3xl font-extrabold flex gap-2"><span><img src="/assets/images/oxygen-logo.png" alt="logo" class="h-10"></span>Oxygen School</div>
+      <!-- toggle -->
+      <button data-toggle="#target-nav"
+        class="[&.show_.btn-open]:!hidden [&.show_.btn-close]:!block w-12 h-12 flex items-center justify-center border-2 border-black rounded lg:hidden shadow-[2px_2px_0_0_#000000]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+          class="btn-open block bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        </svg>
+        <!-- close -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+          class="btn-close hidden bi bi-x-lg" viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+        </svg>
+      </button>
+
+      <!-- navbar -->
+      <div id="target-nav"
+        class="uppercase max-lg:fixed max-lg:w-72 max-lg:inset-y-0 max-lg:left-0 max-lg:[&.show]:translate-x-0 max-lg:bg-white max-lg:border-r-2 max-lg:border-black max-lg:z-50 max-lg:-translate-x-full transform duration-300">
+        <nav class="max-lg:flex max-lg:flex-col max-lg:h-full max-lg:overflow-auto lg:space-x-4">
+            <a href="/"
+                class="active max-lg:py-3 max-lg:px-4 max-lg:border-b max-lg:border-black hover:text-[#3068E0] [&.active]:text-[#3068E0]">Accueil</a>
+            <a href="#"
+                class="max-lg:py-3 max-lg:px-4 max-lg:border-b max-lg:border-black hover:text-[#3068E0] [&.active]:text-[#3068E0]">Formations</a>
+            <a href="#"
+                class="max-lg:py-3 max-lg:px-4 max-lg:border-b max-lg:border-black hover:text-[#3068E0] [&.active]:text-[#3068E0]">Favoris</a>
+            <a href="#"
+                class="max-lg:py-3 max-lg:px-4 max-lg:border-b max-lg:border-black hover:text-[#3068E0] [&.active]:text-[#3068E0]">Contact</a>
+        </nav>
+      </div>
+
+      <!-- bg mobile sidebar -->
+      <button data-toggle="#target-nav"
+        class="max-lg:fixed max-lg:bg-black max-lg:[&.show]:inset-0 max-lg:opacity-0 max-lg:[&.show]:opacity-70 transform duration-300 lg:hidden"></button>
+    </div>
+</header>
