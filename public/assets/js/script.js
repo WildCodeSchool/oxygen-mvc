@@ -89,6 +89,30 @@ document.addEventListener("DOMContentLoaded", function () {
       window.addEventListener("scroll", handleWidth);
     }
     ProgressBar();
+
+    // Function to update active state of navbar links
+    function updateActiveState() {
+        // Get the current path URL
+        var path = window.location.pathname;
+
+        // Get all the navbar links
+        var links = document.querySelectorAll('#target-nav a');
+
+        // Loop through each link and check if the path matches
+        links.forEach(function (link) {
+            if (link.getAttribute('href') === path) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    // Initial update on page load
+    updateActiveState();
+
+    // Update active state on each URL change
+    window.addEventListener('popstate', updateActiveState);
   
     // BACK TO TOP
     function handleBackToTop() {
