@@ -68,8 +68,8 @@ ALTER TABLE `item`
 
 CREATE TABLE `Student` (
   `id` INT NOT NULL,
-  `firstname` VARCHAR(100) NOT NULL,
-  `name` VARCHAR(150) NOT NULL,
+  `firstName` VARCHAR(100) NOT NULL,
+  `lastName` VARCHAR(150) NOT NULL,
   `email` VARCHAR(150) NOT NULL,
   `tel` INT(10),
   `degree` VARCHAR(100),
@@ -166,7 +166,7 @@ INSERT INTO `Discipline` (`id`, `name`, `description`) VALUES
 -- Contenu de la table `Student`
 --
 
-INSERT INTO `Student` (`id`, `firstname`, `name`, `email`, `tel`, `degree`, `birthday`, `address`, `avatar_image`) VALUES
+INSERT INTO `Student` (`id`, `firstName`, `lastName`, `email`, `tel`, `degree`, `birthday`, `address`, `avatar_image`) VALUES
 (1, 'Asma', 'Jaballah', 'asma@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'asma.jpg'),
 (2, 'Kevin', 'Girault', 'kevin@gmail.com', 1234567890, 'Master', '1986-01-01', 'Etrangers', 'https://media.licdn.com/dms/image/D5603AQFzhJJ8v2K2QQ/profile-displayphoto-shrink_800_800/0/1685949560183?e=1711584000&v=beta&t=PLV-fVRuPbBUAdYOBGV1M3TFo-ao0k0nAEW-6jfBrOk'),
 (3, 'Joël', 'Mayemba', 'joel@gmail.com', 1234567890, 'Master', '1995-01-01', 'Paris', 'https://media.licdn.com/dms/image/D4E03AQF_1iyiRToEHQ/profile-displayphoto-shrink_800_800/0/1701904115437?e=1711584000&v=beta&t=z3HTNjBHIO5npMAXU5A5VhmRBrHwu499FrSaqgjnkoY'),
