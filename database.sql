@@ -68,16 +68,16 @@ ALTER TABLE `item`
 
 CREATE TABLE `Student` (
   `id` INT NOT NULL,
-  `firstname` VARCHAR(100),
-  `name` VARCHAR(150),
-  `email` VARCHAR(150),
+  `firstname` VARCHAR(100) NOT NULL,
+  `name` VARCHAR(150) NOT NULL,
+  `email` VARCHAR(150) NOT NULL,
   `tel` INT(10),
   `degree` VARCHAR(100),
   `birthday` DATE,
-  `address` TEXT,
+  `address` TEXT NOT NULL,
   `avatar_image` VARCHAR(255),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Structure de la table `Course`
@@ -85,19 +85,19 @@ CREATE TABLE `Student` (
 
 CREATE TABLE `Course` (
   `id` INT NOT NULL,
-  `name` VARCHAR(100),
-  `description` VARCHAR(150),
-  `capacity` VARCHAR(150),
+  `name` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(150) NOT NULL,
+  `capacity` VARCHAR(150) NOT NULL,
   `location` VARCHAR(100),
-  `date` DATE,
+  `date` DATE NOT NULL,
   `duration` VARCHAR(50),
-  `degree` VARCHAR(100),
+  `degree` VARCHAR(100) NOT NULL,
   `financing_supported` BOOLEAN,
   `discipline_id` INT,
   `url_image` VARCHAR(255),
   PRIMARY KEY (`id`),
   FOREIGN KEY (`discipline_id`) REFERENCES `Discipline`(`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Structure de la table `Discipline`
@@ -105,10 +105,10 @@ CREATE TABLE `Course` (
 
 CREATE TABLE `Discipline` (
   `id` INT NOT NULL,
-  `name` VARCHAR(100),
-  `description` VARCHAR(150),
+  `name` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Structure de la table `Les_eleves_d_Oxygen_School_temoignent`
@@ -120,7 +120,7 @@ CREATE TABLE `Student_Reviews` (
   `testimonial` TEXT,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`student_id`) REFERENCES `Student`(`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- AUTO_INCREMENT pour les tables exportées
