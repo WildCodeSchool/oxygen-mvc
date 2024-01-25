@@ -58,6 +58,7 @@ html,
 body {
   margin: 0; /* 1 */
   line-height: inherit; /* 2 */
+  font-family: Playpen Sans, 'sans serif';
 }
 
 /*
@@ -190,6 +191,10 @@ textarea {
   color: inherit; /* 1 */
   margin: 0; /* 2 */
   padding: 0; /* 3 */
+}
+
+canvas {
+    display: block;
 }
 
 /*
