@@ -12,7 +12,11 @@
     <title>{% block title %}{{ name }}{% endblock %}</title>
 
     <link rel="stylesheet" href="/assets/css/style.css">
+<<<<<<< HEAD
   
+=======
+    <link rel="stylesheet" href="/assets/css/footer.css">
+>>>>>>> f59b876d148eca8611f5480015e1cd00cbb03b77
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500;900&amp;display=swap" rel="stylesheet">
 
    
@@ -27,6 +31,9 @@
     {% block javascript %}{% endblock %}
 
 </body>
+<footer>
+{% include 'components/footer.html.twig' %}
+</footer>
 </html>
 
 
