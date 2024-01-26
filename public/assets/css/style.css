@@ -46,7 +46,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: url("assets\images\oxygen-logo.png");
+    background-image: url("../images/backpic-2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
