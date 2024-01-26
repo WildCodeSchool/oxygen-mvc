@@ -5,12 +5,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
 
     <title>{% block title %}{{ name }}{% endblock %}</title>
 
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/b51dcfdd20.js" crossorigin="anonymous"></script>
+  
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500;900&amp;display=swap" rel="stylesheet">
 
     <style>
@@ -21,13 +23,13 @@
     {% block stylesheet %}{% endblock %}
 </head>
 
-<body class="bg-gray-100 pt-[96px]">
+<body>
     {% include 'Item/header.html.twig' %}
     {% block content %}{% endblock %}
 
   
     {% block javascript %}{% endblock %}
-    <script src="/assets/js/script.js"></script>
+
 </body>
 </html>
 
