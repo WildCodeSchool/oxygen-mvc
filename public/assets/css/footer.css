@@ -69,10 +69,18 @@ footer .footer {
     gap: 13px;
 }
 
+
 .footer-cards a {
     color: white;
     text-decoration: none;
+
 }
+
+#social {
+    display: flex;
+    gap: 10px;
+}
+
 
 @media screen and (min-width: 500px) and (max-width: 1050px) {
     footer {
