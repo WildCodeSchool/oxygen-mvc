@@ -1,16 +1,24 @@
 footer {
-    transform: translateY(250px);
+    transform: translateY(40px);
     background-color: black;
     color: white;
     padding: 40px;
 }
 
-footer h1 {
-    color: white;
+footer p {
+    color: rgb(254, 255, 255);
+
     display: flex;
     align-items: center;
-    font-size: 22px;
+    justify-content: center;
+    font-size: 23px;
     justify-self: center;
+}
+
+footer .footer-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    color: rgb(52, 171, 231);
 }
 
 footer .footer {
@@ -25,27 +33,7 @@ footer .footer {
     justify-content: center;
 }
 
-.footer form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 15px;
-}
 
-.footer form input[type="search"] {
-    padding: 15px;
-    width: 50%;
-    border-radius: 5px 0 0 5px;
-    border: none;
-}
-
-.footer form button {
-    padding: 15px;
-    color: white;
-    background-color: var(--principaleColor);
-    border-radius: 0 5px 5px 0;
-    border: none;
-}
 
 .footer-bottom {
     display: flex;
@@ -56,9 +44,7 @@ footer .footer {
     margin-top: 40px;
 }
 
-.footer-mobile {
-    display: none;
-}
+
 
 .footer-bottom .picture {
     display: flex;
@@ -68,8 +54,8 @@ footer .footer {
 }
 
 .footer-bottom img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
 }
 
@@ -83,38 +69,33 @@ footer .footer {
     text-decoration: none;
 }
 
-
-/*the responsive code css for mobile*/
-
-@media screen and (max-width: 600px) {
-    .footer-mobile {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+@media screen and (min-width: 500px) and (max-width: 1050px) {
+    footer {
+        flex-direction: column;
+        padding: 1rem 0;
+        height: auto;
     }
 
-    footer .footer {
-        display: none
+
+    #footer-cards {
+        margin: 3rem 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        flex-direction: column;
+        padding: 1rem 0;
+        height: auto;
     }
 
-    footer .footer-mobile {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footer-bottom {
+    .footer-cards {
         display: none;
     }
 
-    footer {
+
+    #social {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px;
-        background-color: var(--principaleColor);
-        margin-top: 20%;
+        flex-wrap: wrap;
     }
 }
