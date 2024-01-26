@@ -15,7 +15,6 @@
     --font-bolder: 700;
 }
 
-<<<<<<< HEAD
 
 /* navbar for mobile */
 
@@ -236,8 +235,7 @@ nav {
         margin-top: 10%;
     }
 }
-=======
-*,
+
 ::before,
 ::after {
     box-sizing: border-box;
@@ -276,6 +274,7 @@ html,
     /* 7 */
 }
 
+
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
@@ -289,9 +288,9 @@ body {
     font-family: Playpen Sans, 'sans serif'
 }
 
+
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 3. Ensure horizontal rules are visible by default.
 */
->>>>>>> f59b876d148eca8611f5480015e1cd00cbb03b77
