@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Model\DisciplineManager;
 
 class HomeController extends AbstractController
