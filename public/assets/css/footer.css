@@ -5,6 +5,11 @@ footer {
     padding: 40px;
 }
 
+
+ul {
+    list-style: none;
+}
+
 footer p {
     color: rgb(254, 255, 255);
 
