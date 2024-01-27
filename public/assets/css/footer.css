@@ -110,6 +110,11 @@ footer .footer {
     text-align: center;
 }
 
+#social i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
 .footer-bottom img {
     width: 200px;
     height: 200px;
