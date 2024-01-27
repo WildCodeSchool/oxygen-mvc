@@ -11,16 +11,19 @@
     {% block stylesheet %}
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     {% endblock %}
 </head>
 
 <body>
+    {% include 'Item/navbar.html.twig' %}
     {% block content %}{% endblock %}
     {% include 'components/footer.html.twig' %}
 
     {% block javascript %}
     <script src="https://kit.fontawesome.com/b51dcfdd20.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
     {% endblock %}
 </body>
 </html>

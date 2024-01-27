@@ -88,8 +88,6 @@ footer .footer {
     padding: 5rem;
 }
 
-
-
 .footer-bottom .picture {
     display: flex;
     flex-direction: column;
@@ -139,8 +137,6 @@ footer .footer {
 .footer-cards a:hover {
     color: #60A5FA;
 }
-
-
 
 
 @media screen and (min-width: 500px) and (max-width: 1050px) {
