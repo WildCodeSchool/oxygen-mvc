@@ -2,7 +2,8 @@ footer {
     transform: translateY(40px);
     background-color: black;
     color: white;
-    padding: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 
@@ -21,9 +22,8 @@ footer p {
 }
 
 footer .footer-title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 28px;
-    color: rgb(52, 171, 231);
+    font-weight: 600;
 }
 
 footer .footer {
@@ -33,20 +33,59 @@ footer .footer {
 }
 
 .footer .footer-top {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.form-footer{
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.00714em;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+.form-footer input[type="text"] {
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px 0 0 8px;
+    color: #000;
+}
+
+.form-footer button {
+    background-color: #00f;
+    color: #fff;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Additional styles for button hover effect */
+.form-footer button:hover {
+    background-color: #0056b3; /* darker shade of blue */
 }
 
 
-
 .footer-bottom {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
-    margin-top: 40px;
+    padding: 5rem;
 }
 
 
@@ -56,6 +95,19 @@ footer .footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+
+#social {
+    margin: 0;
+    color: #60A5FA;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-bottom img {
@@ -69,17 +121,21 @@ footer .footer {
     gap: 13px;
 }
 
+.footer-cards h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
 
 .footer-cards a {
-    color: white;
     text-decoration: none;
-
 }
 
-#social {
-    display: flex;
-    gap: 10px;
+.footer-cards a:hover {
+    color: #60A5FA;
 }
+
+
 
 
 @media screen and (min-width: 500px) and (max-width: 1050px) {
