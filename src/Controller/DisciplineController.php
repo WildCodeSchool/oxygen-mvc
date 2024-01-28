@@ -11,7 +11,7 @@ class HomeController extends AbstractController
     {
         $name = 'Oxygen';
         return $this->twig->render('discipline/index.html.twig', [
-            'name' => $name,
+            'discipline' => $name,
         ]);
     }
 }
