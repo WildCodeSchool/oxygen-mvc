@@ -1,9 +1,10 @@
 :root {
     --primary: #9ABCEC;
     --secondary: #3068E0;
-    --gray: #838383;
+    --gray: #374151;
     --bg-color: #f3f4f6;
     --pri-yellow: #FFE500;
+    --pri-violet: #D8B4FE;
 }
 
 *,
@@ -172,6 +173,17 @@ select {
     border-radius: 4px;
 }
 
+.card-brutal{
+    box-shadow: 4px 6px 0 0 #000000;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.btn-view {
+    border: 2px solid #000000;
+    border-radius: 4px;
+}
+
 /*=== Trigger  ===*/
 .animate {
     -webkit-animation-duration: 1s;
@@ -179,7 +191,6 @@ select {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-
 
 /*=== Animations start here  ===*/
 

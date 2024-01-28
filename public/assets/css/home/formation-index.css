@@ -1,0 +1,35 @@
+.container-formation {
+    position: relative;
+    z-index: 1;
+    color: black;
+    padding: 3rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-formation h2 {
+    margin-bottom: 1rem; 
+    font-size: 1.875rem;
+    line-height: 2.25rem; 
+    font-weight: 700; 
+}
+
+.container-formation p {
+    margin-bottom: 1.5rem; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 400; 
+}
+
+.container-formation .card-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
