@@ -61,6 +61,7 @@ body {
 
 main {
     margin-top: 100px;
+    overflow: hidden;
 }
 /*
 1. Add the correct height in Firefox.
