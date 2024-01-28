@@ -1,10 +1,12 @@
 <section>
     <div class="container-formation">
-        <h2 class="text-3xl font-bold mb-4">DES DISCIPLINES POUR CHOISIR DE FORMATION</h2>
+        <h2>DES DISCIPLINES POUR CHOISIR DE FORMATION</h2>
         <p>La Oxygen School propose des formations à temps plein et en alternance. 
             Du débutant déterminé au pro avancé, repousser vos limites à travers la formation de votre choix.</p>
         <div class="card-container">
-            {% include 'Item/card_dis.html.twig' %}
+            {% for discipline in disciplines %}
+                {% include 'Item/card_dis.html.twig' with {'discipline': discipline} %}
+            {% endfor %}
         </div>
     </div>
 </section>

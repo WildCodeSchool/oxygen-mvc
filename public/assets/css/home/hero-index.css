@@ -5,6 +5,10 @@ section {
     border-bottom: solid 4px #000000;
 }
 
+#hero {
+    padding: 5rem 0;
+}
+
 .bg-overlay {
     position: absolute; 
     top: 0;
@@ -91,6 +95,10 @@ section {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+
+    #hero {
+        padding: 1rem 0;
+    }
     .content h1 {
         margin: 0;
         padding: 0 2rem;
