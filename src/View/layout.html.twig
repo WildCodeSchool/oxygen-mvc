@@ -18,7 +18,9 @@
 
 <body>
     {% include 'Item/navbar.html.twig' %}
-    {% block content %}{% endblock %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
     {% include 'components/footer.html.twig' %}
 
     {% block javascript %}
