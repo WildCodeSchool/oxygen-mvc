@@ -1,5 +1,9 @@
 {% extends 'layout.html.twig' %}
     {% block title %}{{ parent() }}: Home page{% endblock %}
+    {% block stylesheet %}
+        {{ parent() }}
+        <link rel="stylesheet" href="/assets/css/home/hero-index.css">
+    {% endblock %}
 {% block content %}
     {% include 'Home/hero.html.twig' %}
     <h1>Welcome to Oxygen School !</h1>

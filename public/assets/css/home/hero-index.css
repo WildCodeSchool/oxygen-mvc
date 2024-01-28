@@ -1,0 +1,98 @@
+section {
+    overflow: hidden; 
+    position: relative; 
+    z-index: 0;
+    border-bottom: solid 4px #000000;
+}
+
+.bg-overlay {
+    position: absolute; 
+    top: 0;
+    bottom: 0; 
+    left: 0; 
+    right: auto; 
+    width: 100%; 
+    height: 100%; 
+    background: #2196f3;
+}
+
+.container-hero {
+    position: relative; 
+    z-index: 1; 
+    color: black; 
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content {
+    margin: 0 auto; 
+    max-width: 960px; 
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.content h1 {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    padding: 0 12rem; 
+    font-size: 2.25rem;
+    line-height: 2.5rem; 
+    font-weight: 700; 
+    line-height: 1.25;
+}
+
+.container-hero a {
+    display: inline-flex; 
+    position: relative; 
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; 
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    flex-direction: row; 
+    column-gap: 0.5rem; 
+    justify-content: center; 
+    align-items: center;  
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    font-weight: 700; 
+    background-color: var(--pri-yellow); 
+    transition-duration: 200ms; 
+}
+
+.marquee {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; 
+    width: 100%; 
+    font-size: 1.5rem;
+    line-height: 2rem; 
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content h1 {
+        margin: 0;
+        padding: 0 2rem;
+    }
+}

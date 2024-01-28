@@ -3,6 +3,7 @@
     --secondary: #3068E0;
     --gray: #838383;
     --bg-color: #f3f4f6;
+    --pri-yellow: #FFE500;
 }
 
 *,
@@ -60,7 +61,7 @@ body {
 }
 
 main {
-    margin-top: 100px;
+    margin-top: 96px;
     overflow: hidden;
 }
 /*
@@ -161,6 +162,14 @@ Remove the inheritance of text transform in Edge and Firefox.
 button,
 select {
     text-transform: none;
+}
+
+/*=== Style Neo-Brutalism  ===*/
+
+.btn-brutal {
+    box-shadow: 4px 4px 0 0 #000000;
+    border: 2px solid #000000;
+    border-radius: 4px;
 }
 
 /*=== Trigger  ===*/
