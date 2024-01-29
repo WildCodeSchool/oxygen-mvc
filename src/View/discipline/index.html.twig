@@ -1,5 +1,5 @@
- {% extends "../layout.html.twig" %}
-    {% block stylesheet %}<link rel="stylesheet" href="/assets/css/discipline.css">{% endblock %}
+ {% extends "layout.html.twig" %}
+    {% block stylesheet %}{{ parent() }}<link rel="stylesheet" href="/assets/css/discipline.css">{% endblock %}
 
 {% block title %}Page discipline{% endblock %}
 {% block content %}

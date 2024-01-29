@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-class HomeController extends AbstractController
+class DisciplineController extends AbstractController
 {
     /**
      * Display home page
