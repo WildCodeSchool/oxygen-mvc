@@ -1,71 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // TRANSITION ELEMENT
-  function handleTransitionElements() {
-    const transitionElements = document.querySelectorAll('[data-view]');
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
+  const animatedEls = document.querySelectorAll("[data-animation]");
 
-      return (
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.bottom >= 0 &&
-        rect.right >= 0 &&
-        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-    function handleTransition() {
-      transitionElements.forEach(function (element) {
-        const dataViewClasses = element.getAttribute('data-view').split(' ');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const animation = entry.target.getAttribute("data-animation");
 
-        if (isInViewport(element)) {
-          dataViewClasses.forEach(function (dataViewClass) {
-            element.classList.add(dataViewClass);
-          });
-        }
-      });
-    }
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate", `${animation}`);
+      } else {
+        entry.target.classList.remove("animate", `${animation}`);
+      }
+    });
+  });
 
-    handleTransition();
-    window.addEventListener("scroll", handleTransition);
-  }
-  handleTransitionElements();
+animatedEls.forEach((el) => observer.observe(el));
 
-  // PROGRESS
-  function ProgressBar() {
-    // Function to get all elements with the data-width attribute
-    const widthElements = document.querySelectorAll('[data-width]');
-
-    // Function to check if an element is in the viewport
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.bottom >= 0 &&
-        rect.right >= 0 &&
-        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-
-    // Function to handle the width of elements based on data-width when in the viewport
-    function handleWidth() {
-      widthElements.forEach(function (element) {
-        // Get the value of data-width from the element
-        const widthValue = element.getAttribute('data-width');
-
-        // Set the width of the element based on the data-width value only if the element is in the viewport
-        if (widthValue && isInViewport(element)) {
-          element.style.width = widthValue;
-          element.style.paddingRight = 10 + 'px';
-          element.textContent = widthValue;
-        }
-      });
-    }
-
-    // Call the handleWidth function when the page is loaded and scrolled
-    handleWidth();
-    window.addEventListener("scroll", handleWidth);
-  }
-  ProgressBar();
 
   // Function to update active state of navbar links
   function updateActiveState() {

@@ -1,15 +1,11 @@
 .card-dis {
     max-width: 20rem;
     max-height: 20rem;
-    /* background-color: #fff; */
     overflow: hidden;
     padding: 2rem; 
     background-color: var(--pri-violet); 
-    /* opacity: 0; */
-    transition: transform 0.7s, opacity 0.7s;
-    transform: translateY(-20px);
-    transition: all 0.3s ease-in-out;
-    transition-delay: 0.2s;
+    /* transition: all 0.3s ease-in-out;
+    transition-delay: 0.2s; */
     width: 350px;
     height: 400px;
 }
@@ -68,4 +64,32 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+}
+
+[data-animation] {
+    opacity: 0;
+}
+
+[data-animation].animate {
+    opacity: 1;
+}
+
+[data-animation]:nth-child(1) {
+    animation-delay: 100ms;
+}
+
+[data-animation]:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+[data-animation]:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+[data-animation]:nth-child(4) {
+    animation-delay: 900ms;
+}
+
+[data-animation]:nth-child(5) {
+    animation-delay: 1200ms;
 }
