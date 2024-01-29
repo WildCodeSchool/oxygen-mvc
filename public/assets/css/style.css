@@ -58,10 +58,6 @@ body {
     /* 3 */
     background-color: var(--bg-color);
 }
-
-main {
-    margin-top: 100px;
-}
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
@@ -149,8 +145,10 @@ textarea {
     padding: 0; /* 3 */
 }
 
-canvas {
-    display: block;
+.btn-main {
+    box-shadow: 4px 6px 0 0 #000000;
+    border: 2px solid var(--secondary);
+    border-radius: 30px;
 }
 
 /*
