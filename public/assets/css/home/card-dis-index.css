@@ -4,8 +4,6 @@
     overflow: hidden;
     padding: 2rem; 
     background-color: var(--pri-violet); 
-    /* transition: all 0.3s ease-in-out;
-    transition-delay: 0.2s; */
     width: 350px;
     height: 400px;
 }
@@ -66,6 +64,8 @@
     gap: 0.5rem;
 }
 
+/* Animation begin */
+
 [data-animation] {
     opacity: 0;
 }
@@ -92,4 +92,10 @@
 
 [data-animation]:nth-child(5) {
     animation-delay: 1200ms;
+}
+
+@media (max-width: 768px) {
+    [data-animation] {
+        animation: none;
+    }
 }
