@@ -1,0 +1,46 @@
+.intro-01 {
+    background-color: var(--pri-green);
+    max-height: 600px;
+    display: flex;
+    padding: 0 2rem;
+}
+
+.intro-01 .card-2 {
+    margin: 5rem 2rem;
+    max-width: 960px;
+    height: 20rem;
+    padding: 50px 2rem;
+    text-align: left;
+    background-color: var(--bg-color);
+}
+
+.intro-01 .card-2 h2 {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.intro-01 .card-2 p {
+    font-size: 0.8rem;
+}
+
+/* Responsive for mobile devices */
+
+@media screen and (max-width: 768px) {
+    .intro-01 {
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+
+    .intro-01 .card-2 {
+        margin: 5rem 0;
+        padding: 1rem 1rem;
+    }
+
+    .intro-01 .img-intro-01 {
+        display: none;
+    }
+}
