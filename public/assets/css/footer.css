@@ -6,14 +6,12 @@ footer {
     padding-bottom: 8px;
 }
 
-
 ul {
     list-style: none;
 }
 
 footer p {
     color: rgb(254, 255, 255);
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +39,7 @@ footer .footer {
     padding: 40px;
 }
 
-.form-footer{
+.form-footer {
     position: relative;
     display: inline-flex;
     flex-direction: row;
@@ -73,11 +71,13 @@ footer .footer {
     border-radius: 0 8px 8px 0;
 }
 
-/* Additional styles for button hover effect */
-.form-footer button:hover {
-    background-color: #0056b3; /* darker shade of blue */
-}
 
+/* Additional styles for button hover effect */
+
+.form-footer button:hover {
+    background-color: #0056b3;
+    /* darker shade of blue */
+}
 
 .footer-bottom {
     width: 100%;
@@ -138,15 +138,19 @@ footer .footer {
     color: #60A5FA;
 }
 
-
 @media screen and (min-width: 500px) and (max-width: 1050px) {
     footer {
+        padding: 15px;
         flex-direction: column;
         padding: 1rem 0;
         height: auto;
     }
-
-
+    footer p {
+        padding: 10px;
+    }
+    .footer-title {
+        text-align: center;
+    }
     #footer-cards {
         margin: 3rem 0;
     }
@@ -154,16 +158,14 @@ footer .footer {
 
 @media screen and (max-width: 500px) {
     footer {
+        padding: 15px;
         flex-direction: column;
         padding: 1rem 0;
         height: auto;
     }
-
     .footer-cards {
         display: none;
     }
-
-
     #social {
         display: flex;
         flex-wrap: wrap;
