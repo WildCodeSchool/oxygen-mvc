@@ -1,3 +1,14 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    height: auto;
+    background-color: var(--secondaryColor);
+
+}
+
 .parag {
     display: flex;
     justify-content: center;
@@ -23,6 +34,8 @@
     font-family: var(--principalFontFamily);
 
 }
+
+
 
 .info {
     border: solid #32a1ce;
@@ -80,9 +93,8 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    width: 100%;
+    width: 62%;
     margin-left: 18rem;
-    padding-right: 35rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
@@ -98,19 +110,14 @@
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
-    padding-top: 2rem;
     font-size: 26px;
     background-color: #f4f9f9;
-
-
 }
-
-
 
 form {
     width: 100%;
-    padding-left: 17rem;
     padding-right: 17rem;
+    padding-left: 17rem;
 }
 
 .input_form {
@@ -138,15 +145,144 @@ button {
     display: inline-block;
     background-color: rgb(173, 218, 247);
     border: 2px solid rgb(50, 162, 237);
-    border-radius: 15px;
-    color: rgb(0, 0, 10);
+    border-radius: 10px;
+    color: rgb(5, 5, 42);
     font-weight: bold;
     text-align: center;
-    font-size: 28px;
-    padding: 15px;
+    font-size: 25px;
     width: 50%;
-    margin-left: 15rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 10rem;
+
     margin-top: 2rem;
     margin-bottom: 2rem;
 
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1050px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parag {
+        display: none;
+    }
+
+    .info {
+        width: 40%;
+    }
+
+
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+
+
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+
+    }
+
+    .parag {
+        display: none;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .info {
+        width: 30%;
+    }
+
+
+
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+
+
+}
+
+
+@media screen and (max-width: 500px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parag {
+        display: none;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .info {
+        width: 40%;
+    }
+
+
+
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+
+
+
+    }
 }
