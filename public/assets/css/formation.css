@@ -17,6 +17,16 @@
     --font-family: 'Roboto', sans-serif;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    gap: 1.8rem;
+}
+
 .formation-description-text {
     width: 70%;
     background-color: var(--principal-color);
@@ -69,7 +79,7 @@
 }
 
 
-/* css formulaire */
+/* css formu */
 
 .form {
     width: 70%;
@@ -110,4 +120,77 @@ form input[type="submit"] {
     color: var(--white-color);
     font-weight: var(--font-weight);
     margin: 0;
+}
+
+form fieldset textarea {
+    text-align: left;
+    border: none;
+    resize: none;
+    width: 100%;
+    overflow: auto;
+}
+
+form fieldset:focus {
+    border: 3px solid black;
+}
+
+form fieldset textarea:focus {
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}
+
+
+/* css fomulaire */
+
+
+/* css responsive */
+
+@media screen and (max-width: 768px) {
+    .grid {
+        gap: 1rem;
+    }
+    .formation-description-text {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .formation-infos-description {
+        display: grid;
+        font-size: 1rem;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 0.3rem;
+        justify-items: center;
+        /* Horizontally center the grid items */
+        align-items: center;
+    }
+    .formation-description-text article {
+        font-size: 1.3rem;
+        text-align: justify;
+    }
+    .formation-infos-description div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .formation-infos-description div i {
+        font-size: 1.8rem;
+        margin: 0 auto;
+    }
+    form fieldset {
+        padding: 1rem;
+        border: 2px solid #23A6F0;
+    }
+    form fieldset textarea {
+        border: none;
+        resize: none;
+        width: 100%;
+    }
+    form fieldset textarea:focus {
+        outline: none;
+        text-align: left;
+        border: none;
+        font-size: 1rem;
+    }
 }
