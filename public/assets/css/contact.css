@@ -6,7 +6,16 @@
     padding: 1rem 0;
     height: auto;
     background-color: var(--secondaryColor);
+}
 
+section {
+    border: 1px solid black;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 .parag {
@@ -32,10 +41,7 @@
     font-size: 2.5rem;
     color: rgb(89, 150, 237);
     font-family: var(--principalFontFamily);
-
 }
-
-
 
 .info {
     border: solid #32a1ce;
@@ -73,33 +79,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .coord {
     font-weight: bold;
 }
 
-
 .bloc {
-
     padding-left: 17rem;
     padding-right: 17rem;
-
 }
 
 .team {
     display: flex;
-    flex-direction: row;
+    border: 1px solid black;
+    width: 70%;
     gap: 10px;
-    width: 62%;
-    margin-left: 18rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0 auto;
 }
-
-
 
 .member-cards {
     border: solid #b3ebf8;
@@ -114,12 +111,6 @@
     background-color: #f4f9f9;
 }
 
-form {
-    width: 100%;
-    padding-right: 17rem;
-    padding-left: 17rem;
-}
-
 .input_form {
     border: 2px solid rgb(173, 218, 247);
     width: 100%;
@@ -129,8 +120,6 @@ form {
     box-sizing: border-box;
     border-radius: 4px;
 }
-
-
 
 label {
     font-size: 20px;
@@ -156,11 +145,68 @@ button {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-left: 10rem;
-
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
 
+.form {
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
 
+form {
+    display: grid;
+    border: 1px solid black;
+}
+
+form input {
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+form fieldset {
+    padding: 1rem;
+    border: 1px solid #23A6F0;
+}
+
+form fieldset legend {
+    position: relative;
+    padding-right: 3.5rem;
+    left: 2rem;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form input[type="submit"] {
+    background-color: var(--principal-color);
+    width: 120px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--white-color);
+    font-weight: var(--font-weight);
+    margin: 0;
+}
+
+form fieldset textarea {
+    text-align: left;
+    border: none;
+    resize: none;
+    width: 100%;
+    overflow: auto;
+}
+
+form fieldset:focus {
+    border: 3px solid black;
+}
+
+form fieldset textarea:focus {
+    outline: none;
+    border: none;
+    font-size: 1rem;
 }
 
 @media screen and (min-width: 500px) and (max-width: 1050px) {
@@ -168,34 +214,29 @@ button {
         margin: 0;
         padding: 0;
     }
-
+    section {
+        border: 1px solid black;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
     .contact {
         display: flex;
         flex-direction: column;
     }
-
     .parag {
         display: none;
     }
-
     .info {
         width: 40%;
     }
-
-
-
-    .form {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-    }
-
     .team {
         display: flex;
         flex-direction: column;
         width: 40%;
-
-
     }
 }
 
@@ -204,85 +245,52 @@ button {
         margin: 0;
         padding: 0;
     }
-
+    section {
+        border: 1px solid black;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
     .contact {
         display: flex;
         flex-direction: column;
         padding: 1rem 0;
-
     }
-
     .parag {
         display: none;
     }
-
     .img {
         display: none;
     }
-
     .info {
         width: 30%;
     }
-
-
-
-
 }
-
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 98%;
-}
-
-.team {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-
-
-
-}
-
 
 @media screen and (max-width: 500px) {
     * {
         margin: 0;
         padding: 0;
     }
-
     .contact {
         display: flex;
         flex-direction: column;
     }
-
     .parag {
         display: none;
     }
-
     .img {
         display: none;
     }
-
     .info {
         width: 40%;
     }
-
-
-
-
-    .form {
-        display: flex;
-        flex-direction: column;
-        width: 95%;
-    }
-
     .team {
         display: flex;
         flex-direction: column;
         width: 40%;
-
-
-
     }
 }
