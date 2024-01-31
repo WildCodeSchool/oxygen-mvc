@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+    {% block title %}Contact : infos, adresse, equipe oxygen school{% endblock %}
+{% block stylesheet %}
+   <link rel="stylesheet" href="/assets/css/navbar.css">
+   <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/contact.css">
+{% endblock %}
+{% block content %}
+<div class="contact">
+      <div>
+
+            <div>
+                <section>
+
+                    <h1 class="center">Oxygen School : Qui sommes-nous</h1>
+                 <p class ='parag' >La mission d’Oxygen School est de rendre l’éducation accessible à tous. 
+           Nous sommes un centre de formation qui permet à des milliers d’individus 
+           partout en France de développer leurs compétences professionnelles et de se former aux métiers qui recrutent.
+   <div class="info"> 
+   <div class="img">
+   <img src="assets\images\contact.png" alt="Contactez-nous"></div>
+    <address>
+     <div class="coord">
+        Adresse : </div>
+        68 av philipe augueste 75011 paris<br>
+        <br><div class="coord">Email : </div><a>contact@oxygen-school.com</a><br> 
+        <br><div class="coord">Téléphone : </div>
+        Fix : 01 50 22 32 23 <br>
+        Mobile : 01 50 22 32 23 <br>
+       
+    </address>
+
+                </section>          
+            </div>
+ {% include 'components/contact_form.html.twig' %}
+
+ {% include 'components/equipe.html.twig' %}
+ </div>
+
+{% endblock %}
+
+
