@@ -72,10 +72,13 @@ footer .footer {
 }
 
 
+
 /* Additional styles for button hover effect */
+
 
 .form-footer button:hover {
     background-color: #0056b3;
+
     /* darker shade of blue */
 }
 
@@ -141,9 +144,18 @@ footer .footer {
 @media screen and (min-width: 500px) and (max-width: 1050px) {
     footer {
         padding: 15px;
+        padding: 15px;
         flex-direction: column;
         padding: 1rem 0;
         height: auto;
+    }
+
+    footer p {
+        padding: 10px;
+    }
+
+    .footer-title {
+        text-align: center;
     }
 
     footer p {
@@ -162,6 +174,7 @@ footer .footer {
 @media screen and (max-width: 500px) {
     footer {
         padding: 15px;
+        padding: 15px;
         flex-direction: column;
         padding: 1rem 0;
         height: auto;
@@ -170,6 +183,7 @@ footer .footer {
     .footer-cards {
         display: none;
     }
+
 
     #social {
         display: flex;
