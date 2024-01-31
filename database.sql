@@ -103,12 +103,12 @@ CREATE TABLE `Course` (
 -- Structure de la table `Discipline`
 --
 
-CREATE TABLE 'Discipline' (
-  'id' INT NOT NULL,
-  'icon' VARCHAR(100) NOT NULL,
-  'name' VARCHAR(100) NOT NULL,
-  'description' VARCHAR(5000) NOT NULL,
-  PRIMARY KEY ('id')
+CREATE TABLE `Discipline` (
+  `id` INT NOT NULL,
+  `icon` VARCHAR(100) NOT NULL,
+  `name` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(5000) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 --
 -- Structure de la table `Les_eleves_d_Oxygen_School_temoignent`
@@ -169,7 +169,7 @@ ALTER TABLE `Student_Reviews`
 -- Contenu de la table `Discipline`
 --
 
-INSERT INTO 'Discipline' ('id', 'icon', 'name', 'description') VALUES
+INSERT INTO `Discipline` (`id`, `icon`, `name`, `description`) VALUES
 (1, 'fa-laptop-code', 'Informatique', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
 (2, 'fa-pen-nib', 'Design', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
 (3, 'fa-money-bill-trend-up', 'Finance', 'Nos formations en finance vous permettront d’acquérir une culture économique et financière solide.'),
