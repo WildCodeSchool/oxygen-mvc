@@ -3,6 +3,8 @@
     --secondary: #3068E0;
     --gray: #838383;
     --bg-color: #f3f4f6;
+    --bg-color-blue: #6ADBFF;
+    --text-color: #0F55E8;
 }
 
 *,
@@ -57,10 +59,6 @@ body {
     font-family: Playpen Sans, 'sans serif';
     /* 3 */
     background-color: var(--bg-color);
-}
-
-main {
-    margin-top: 100px;
 }
 /*
 1. Add the correct height in Firefox.
@@ -149,8 +147,10 @@ textarea {
     padding: 0; /* 3 */
 }
 
-canvas {
-    display: block;
+.btn-main {
+    box-shadow: 4px 6px 0 0 #000000;
+    border: 2px solid var(--secondary);
+    border-radius: 30px;
 }
 
 /*
