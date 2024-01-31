@@ -22,8 +22,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 17rem;
-    padding-right: 17rem;
+
     padding-top: 1rem;
     padding-bottom: 2rem;
     margin: 0 auto;
@@ -214,6 +213,7 @@ form fieldset textarea:focus {
         margin: 0;
         padding: 0;
     }
+
     section {
         border: 1px solid black;
         width: 90%;
@@ -223,16 +223,20 @@ form fieldset textarea:focus {
         flex-direction: column;
         margin: 0 auto;
     }
+
     .contact {
         display: flex;
         flex-direction: column;
     }
+
     .parag {
         display: none;
     }
+
     .info {
         width: 40%;
     }
+
     .team {
         display: flex;
         flex-direction: column;
@@ -245,6 +249,7 @@ form fieldset textarea:focus {
         margin: 0;
         padding: 0;
     }
+
     section {
         border: 1px solid black;
         width: 90%;
@@ -254,17 +259,21 @@ form fieldset textarea:focus {
         flex-direction: column;
         margin: 0 auto;
     }
+
     .contact {
         display: flex;
         flex-direction: column;
         padding: 1rem 0;
     }
+
     .parag {
         display: none;
     }
+
     .img {
         display: none;
     }
+
     .info {
         width: 30%;
     }
@@ -275,19 +284,24 @@ form fieldset textarea:focus {
         margin: 0;
         padding: 0;
     }
+
     .contact {
         display: flex;
         flex-direction: column;
     }
+
     .parag {
         display: none;
     }
+
     .img {
         display: none;
     }
+
     .info {
         width: 40%;
     }
+
     .team {
         display: flex;
         flex-direction: column;
