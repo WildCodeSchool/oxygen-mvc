@@ -91,16 +91,6 @@
     text-overflow: ellipsis;
 }
 
-
-/*   .formation-text p {
-        font-size: 0.8rem;
-        overflow: ellipsis;
-        white-space: wrap;
-        text-overflow: ellipsis;
-        height: 75px;
-        text-align: justify;
-    }*/
-
 .formation-description {
     margin: 3rem auto;
 }
