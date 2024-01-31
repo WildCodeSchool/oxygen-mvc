@@ -1,0 +1,34 @@
+.formation {
+    position: relative;
+    height: 40rem;
+}
+.card-container {
+    position: absolute;
+    padding: 0 7rem;
+    top: -6rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Responsive for mobile */
+
+@media (max-width: 768px) {
+    .formation {
+        position: relative;
+        height: auto;
+    }
+    .card-container {
+        position: relative;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}

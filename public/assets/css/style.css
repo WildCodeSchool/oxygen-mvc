@@ -3,6 +3,8 @@
     --secondary: #3068E0;
     --gray: #838383;
     --bg-color: #f3f4f6;
+    --bg-color-blue: #6ADBFF;
+    --text-color: #0F55E8;
 }
 
 *,
@@ -59,9 +61,6 @@ body {
     background-color: var(--bg-color);
 }
 
-main {
-    margin-top: 100px;
-}
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
@@ -69,18 +68,21 @@ main {
 */
 
 hr {
-    height: 0; /* 1 */
-    color: inherit; /* 2 */
-    border-top-width: 1px; /* 3 */
+    height: 0;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    border-top-width: 1px;
+    /* 3 */
 }
-  
+
 /*
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
 abbr:where([title]) {
     -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted;
+    text-decoration: underline dotted;
 }
 
 /*
@@ -122,9 +124,12 @@ strong {
 */
 
 table {
-    text-indent: 0; /* 1 */
-    border-color: inherit; /* 2 */
-    border-collapse: collapse; /* 3 */
+    text-indent: 0;
+    /* 1 */
+    border-color: inherit;
+    /* 2 */
+    border-collapse: collapse;
+    /* 3 */
 }
 
 /*
@@ -138,19 +143,30 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: inherit; /* 1 */
-    font-feature-settings: inherit; /* 1 */
-    font-variation-settings: inherit; /* 1 */
-    font-size: 100%; /* 1 */
-    font-weight: inherit; /* 1 */
-    line-height: inherit; /* 1 */
-    color: inherit; /* 1 */
-    margin: 0; /* 2 */
-    padding: 0; /* 3 */
+    font-family: inherit;
+    /* 1 */
+    font-feature-settings: inherit;
+    /* 1 */
+    font-variation-settings: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    font-weight: inherit;
+    /* 1 */
+    line-height: inherit;
+    /* 1 */
+    color: inherit;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+    padding: 0;
+    /* 3 */
 }
 
-canvas {
-    display: block;
+.btn-main {
+    box-shadow: 4px 6px 0 0 #000000;
+    border: 2px solid var(--secondary);
+    border-radius: 30px;
 }
 
 /*
@@ -176,17 +192,18 @@ select {
 /*==== FADE IN UP ===*/
 @-webkit-keyframes fadeInUp {
     from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
     }
-  
+
     to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
     }
 }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -211,24 +228,28 @@ select {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
 }
+
 @-webkit-keyframes fadeInDown {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
 }
+
 @keyframes fadeInDown {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
         transform: translate3d(0, -100%, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
@@ -250,6 +271,7 @@ select {
         transform: none;
     }
 }
+
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -283,6 +305,7 @@ select {
         transform: none;
     }
 }
+
 @keyframes fadeInRight {
     from {
         opacity: 0;
@@ -311,8 +334,9 @@ select {
     to {
         opacity: 1;
     }
-    }
-    @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -321,6 +345,7 @@ select {
         opacity: 1;
     }
 }
+
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
@@ -331,24 +356,28 @@ select {
     -webkit-animation-name: fadeInUpBig;
     animation-name: fadeInUpBig;
 }
+
 @-webkit-keyframes fadeInUpBig {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(0, 2000px, 0);
         transform: translate3d(0, 2000px, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
-    }
-    @keyframes fadeInUpBig {
+}
+
+@keyframes fadeInUpBig {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(0, 2000px, 0);
         transform: translate3d(0, 2000px, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
@@ -361,24 +390,28 @@ select {
     -webkit-animation-name: fadeInDownBig;
     animation-name: fadeInDownBig;
 }
+
 @-webkit-keyframes fadeInDownBig {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(0, -2000px, 0);
         transform: translate3d(0, -2000px, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
-    }
-    @keyframes fadeInDownBig {
+}
+
+@keyframes fadeInDownBig {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(0, -2000px, 0);
         transform: translate3d(0, -2000px, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
@@ -391,24 +424,28 @@ select {
     -webkit-animation-name: fadeInLeftBig;
     animation-name: fadeInLeftBig;
 }
+
 @-webkit-keyframes fadeInLeftBig {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(-2000px, 0, 0);
         transform: translate3d(-2000px, 0, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
-    }
-    @keyframes fadeInLeftBig {
+}
+
+@keyframes fadeInLeftBig {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(-2000px, 0, 0);
         transform: translate3d(-2000px, 0, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
@@ -421,24 +458,28 @@ select {
     -webkit-animation-name: fadeInRightBig;
     animation-name: fadeInRightBig;
 }
+
 @-webkit-keyframes fadeInRightBig {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(2000px, 0, 0);
         transform: translate3d(2000px, 0, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;
         transform: none;
     }
-    }
-    @keyframes fadeInRightBig {
+}
+
+@keyframes fadeInRightBig {
     0% {
         opacity: 0;
         -webkit-transform: translate3d(2000px, 0, 0);
         transform: translate3d(2000px, 0, 0);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: none;

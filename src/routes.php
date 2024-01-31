@@ -11,6 +11,7 @@ return [
     'items' => ['ItemController', 'index',],
     'formation' => ['FormationController', 'index',],
     'discipline' => ['DisciplineController', 'index',],
+    'contact' => ['ContactController', 'index'],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
