@@ -6,20 +6,16 @@ use App\Model\DisciplineManager;
 
 class DisciplineController extends AbstractController
 {
-    /**
-     * Display home page
-     */
-    // public function __construct(private DisciplineManager $disciplineManager= new disciplineManager())
-    // {
-    //     parent::__construct();
-    // }
-
-
-    public function index(): string
+    public function index(): string //html chaine de charactere
     {
-        $name = 'Oxygen';
+        $disciplineManager = new DisciplineManager();
+        $disciplines = $disciplineManager->selectAll();
+
+
+
+        $name = 'discipline';
         return $this->twig->render('discipline/index.html.twig', [
-            'discipline' => $name,
+            'discipline' => $name, 'disciplines' => $disciplines
         ]);
     }
     // public function show($id): string
