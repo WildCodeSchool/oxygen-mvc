@@ -1,0 +1,7 @@
+<section class="formation">
+    <div class="card-container">
+        {% for discipline in disciplines %}
+            {% include 'components/home/card-dis.html.twig' with {'discipline': discipline} %}
+        {% endfor %}
+    </div>
+</section>
