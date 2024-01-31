@@ -10,7 +10,7 @@ ul {
     list-style: none;
 }
 
-footer p {
+footer .des-footer {
     color: rgb(254, 255, 255);
     display: flex;
     align-items: center;
@@ -59,8 +59,8 @@ footer .footer {
     color: #000;
 }
 
-.form-footer button {
-    background-color: #00f;
+.form-footer .btn-footer {
+    background-color: #60A5FA;
     color: #fff;
     padding-left: 24px;
     padding-right: 24px;
@@ -76,7 +76,7 @@ footer .footer {
 /* Additional styles for button hover effect */
 
 
-.form-footer button:hover {
+.form-footer .btn-footer:hover {
     background-color: #0056b3;
 
     /* darker shade of blue */

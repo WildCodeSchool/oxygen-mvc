@@ -1,0 +1,8 @@
+<section class="std-review">
+    <h2>Les élèves d’ Oxygen School temoignent  </h2>
+    <div class="card-review-container">
+        {# {% for student in students %} #}
+            {% include 'components/home/card-review.html.twig' with {'student': student} %}
+        {# {% endfor %} #}
+    </div>
+</section>
