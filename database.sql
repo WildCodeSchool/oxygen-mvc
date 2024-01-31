@@ -67,7 +67,7 @@ ALTER TABLE `item`
 --
 
 CREATE TABLE `Student` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(100) NOT NULL,
   `lastName` VARCHAR(150) NOT NULL,
   `email` VARCHAR(150) NOT NULL,
@@ -84,7 +84,7 @@ CREATE TABLE `Student` (
 --
 
 CREATE TABLE `Course` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `description` VARCHAR(150) NOT NULL,
   `capacity` VARCHAR(150) NOT NULL,
@@ -104,7 +104,7 @@ CREATE TABLE `Course` (
 --
 
 CREATE TABLE `Discipline` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `icon` VARCHAR(100) NOT NULL,
   `name` VARCHAR(100) NOT NULL,
   `description` VARCHAR(5000) NOT NULL,
@@ -115,7 +115,7 @@ CREATE TABLE `Discipline` (
 --
 
 CREATE TABLE `Student_Reviews` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `student_id` INT,
   `testimonial` TEXT,
   PRIMARY KEY (`id`),
@@ -141,29 +141,6 @@ CREATE TABLE `contact` (
 --
 
 --
--- AUTO_INCREMENT pour la table `Student`
---
-ALTER TABLE `Student`
-  MODIFY `id` INT NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `Course`
---
-ALTER TABLE `Course`
-  MODIFY `id` INT NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `Discipline`
---
-ALTER TABLE `Discipline`
-  MODIFY `id` INT NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `Les_eleves_d_Oxygen_School_temoignent`
---
-
-ALTER TABLE `Student_Reviews`
-  MODIFY `id` INT NOT NULL AUTO_INCREMENT;
 
 --
 -- Contenu de la table `Discipline`
