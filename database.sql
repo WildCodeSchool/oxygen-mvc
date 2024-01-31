@@ -169,7 +169,7 @@ ALTER TABLE `Student_Reviews`
 -- Contenu de la table `Discipline`
 --
 
-INSERT INTO 'Discipline' ('id', 'icon', 'name', 'description') VALUES
+INSERT INTO `Discipline` (`id`, 'icon', 'name', 'description') VALUES
 (1, 'fa-laptop-code', 'Informatique', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
 (2, 'fa-pen-nib', 'Design', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
 (3, 'fa-money-bill-trend-up', 'Finance', 'Nos formations en finance vous permettront d’acquérir une culture économique et financière solide.'),
