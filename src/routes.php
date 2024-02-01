@@ -11,8 +11,10 @@ return [
     'items' => ['ItemController', 'index',],
     'discipline' => ['DisciplineController', 'index',],
     'contact' => ['ContactController', 'index'],
+    'contact/insert' => ['ContactController', 'insert'],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+
 ];
