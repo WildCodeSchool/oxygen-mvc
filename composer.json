@@ -26,5 +26,8 @@
         "allow-plugins": {
             "phpro/grumphp": true
         }
+    },
+    "scripts": {
+        "fix": "php vendor/bin/phpcbf --standard=PSR2 -w src"
     }
 }

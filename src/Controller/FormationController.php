@@ -9,8 +9,8 @@ class FormationController extends AbstractController
     public function show($id): string
     {
         //get the course whzere id course = id course in the url
-        $CoursesManager = new FormationManager();
-        $formations = $CoursesManager->selectOneById($id);
+        $coursesMananager = new FormationManager();
+        $formations = $coursesMananager->selectOneById($id);
 
         return $this->twig->render('formation/show.html.twig', [
             'formation' => $formations

@@ -12,8 +12,8 @@ class DisciplineController extends AbstractController
     public function index(): string
     {
 
-        $CoursesManager = new FormationManager();
-        $courses = $CoursesManager->selectAll();
+        $coursesMananager = new FormationManager();
+        $courses = $coursesMananager->selectAll();
 
         return $this->twig->render('discipline/index.html.twig', [
             'courses' => $courses,
