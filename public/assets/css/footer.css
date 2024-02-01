@@ -2,8 +2,7 @@ footer {
     transform: translateY(40px);
     background-color: black;
     color: white;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 40px;
 }
 
 ul {
@@ -20,8 +19,9 @@ footer p {
 }
 
 footer .footer-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 28px;
-    font-weight: 600;
+    color: rgb(52, 171, 231);
 }
 
 footer .footer {
@@ -31,6 +31,7 @@ footer .footer {
 }
 
 .footer .footer-top {
+    display: grid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,23 +73,20 @@ footer .footer {
 }
 
 
-
 /* Additional styles for button hover effect */
-
 
 .form-footer button:hover {
     background-color: #0056b3;
-
     /* darker shade of blue */
 }
 
 .footer-bottom {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 5rem;
+    width: 100%;
+    margin-top: 40px;
 }
 
 .footer-bottom .picture {
@@ -96,24 +94,6 @@ footer .footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-}
-
-#social {
-    margin: 0;
-    color: #60A5FA;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-}
-
-#social i {
-    font-size: 25px;
-    cursor: pointer;
 }
 
 .footer-bottom img {
@@ -134,11 +114,13 @@ footer .footer {
 }
 
 .footer-cards a {
+    color: white;
     text-decoration: none;
 }
 
-.footer-cards a:hover {
-    color: #60A5FA;
+#social {
+    display: flex;
+    gap: 10px;
 }
 
 @media screen and (min-width: 500px) and (max-width: 1050px) {
@@ -149,23 +131,12 @@ footer .footer {
         padding: 1rem 0;
         height: auto;
     }
-
     footer p {
         padding: 10px;
     }
-
     .footer-title {
         text-align: center;
     }
-
-    footer p {
-        padding: 10px;
-    }
-
-    .footer-title {
-        text-align: center;
-    }
-
     #footer-cards {
         margin: 3rem 0;
     }
@@ -179,12 +150,9 @@ footer .footer {
         padding: 1rem 0;
         height: auto;
     }
-
     .footer-cards {
         display: none;
     }
-
-
     #social {
         display: flex;
         flex-wrap: wrap;
