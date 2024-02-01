@@ -11,7 +11,7 @@ class ContactManager extends AbstractManager
     /**
      * Insert new item in database
      */
-    
+
     public function insert(array $contact): int
     {
         $query = "INSERT INTO " . self::TABLE .
@@ -29,5 +29,3 @@ class ContactManager extends AbstractManager
         return (int)$this->pdo->lastInsertId();
     }
 }
-
-    

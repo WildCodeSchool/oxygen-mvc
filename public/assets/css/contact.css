@@ -10,7 +10,7 @@
     background-color: var(--secondaryColor);
 }
 
-section {
+.section {
 
     width: 100%;
     align-items: center;
@@ -134,7 +134,7 @@ label {
 
 }
 
-button {
+.button {
     display: inline-block;
     background-color: rgb(173, 218, 247);
     border: 2px solid rgb(50, 162, 237);
@@ -159,13 +159,7 @@ button {
 }
 
 
-.input-3 {
-    border: 1px solid #01cc40;
-}
 
-.input-4 {
-    border: 1px solid red;
-}
 
 .input {
     border: solid #32a1ce;
@@ -181,53 +175,6 @@ button {
     font-size: 1.3rem;
 }
 
-form textarea {
-    text-align: left;
-    width: 100%;
-
-}
-
-
-form fieldset {
-    padding: 1rem;
-    border: 1px solid #23A6F0;
-}
-
-form fieldset legend {
-    position: relative;
-    padding-right: 3.5rem;
-    left: 2rem;
-}
-
-form input:focus {
-    outline: none;
-}
-
-form input[type="submit"] {
-    background-color: var(--principal-color);
-    width: 120px;
-    padding: 10px;
-    border-radius: 10px;
-    color: var(--white-color);
-    font-weight: var(--font-weight);
-    margin: 0;
-}
-
-form textarea {
-    text-align: left;
-    border: none;
-    resize: none;
-    width: 100%;
-    overflow: auto;
-}
-
-
-
-form fieldset textarea:focus {
-    outline: none;
-    border: none;
-    font-size: 1rem;
-}
 
 @media screen and (min-width: 500px) and (max-width: 1050px) {
 
