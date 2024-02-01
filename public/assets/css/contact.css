@@ -2,11 +2,9 @@
     display: flex;
     flex-direction: column;
     font-family: Tahoma;
-    justify-content: center;
-    align-items: center;
     padding-left: 17rem;
     padding-right: 17rem;
-    padding-top: 4rem;
+    padding-top: 6rem;
     background-color: var(--secondaryColor);
 }
 
@@ -24,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    line-height: 1.5;
     padding-top: 1rem;
     padding-bottom: 2rem;
     margin: 0 auto;
@@ -35,13 +33,11 @@
 
 .center {
     display: flex;
-    text-align: center;
     padding-top: 1.5rem;
     margin: 0 auto;
     font-size: 2.5rem;
     color: rgb(89, 150, 237);
     font-family: var(--principalFontFamily);
-    text-align: center;
 }
 
 .info {
@@ -114,9 +110,12 @@
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 4px;
+
+
+
 }
 
-label {
+.label {
     font-size: 20px;
     font-style: italic;
     font-family: var(--principalFontFamily);
@@ -125,6 +124,7 @@ label {
     padding-top: 1rem;
     margin-top: 2rem;
     padding-right: 3rem;
+
 }
 
 ::placeholder {
@@ -156,6 +156,7 @@ label {
 .form {
     width: 100%;
     margin: 0 auto;
+    border-spacing: 5px 1rem;
 }
 
 
@@ -168,7 +169,8 @@ label {
     padding-left: 0.2rem;
     padding-right: 1rem;
     padding-top: 1rem;
-
+    margin-bottom: 1rem;
+    background-color: rgb(242, 239, 239);
     margin-left: 3px;
     border: 2px solid #1a0188;
 
@@ -176,15 +178,28 @@ label {
 }
 
 
-@media screen and (min-width: 500px) and (max-width: 1050px) {
+@media screen and (min-width: 200px) and (max-width: 1050px) {
 
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
     .contact {
         display: flex;
         flex-direction: column;
         margin-top: 3rem;
-        padding: 1rem 0;
+        padding-left: 3rem;
+        padding-right: 3rem;
 
+    }
+
+    .img {
+        display: none;
+    }
+
+    .button {
+        margin-left: 5rem;
     }
 
     .parag {
@@ -201,69 +216,6 @@ label {
     .team {
         display: flex;
         flex-direction: column;
-        width: 50%;
-    }
-}
-
-@media screen and (min-width: 300px) and (max-width: 700px) {
-
-    .contact {
-        display: flex;
-        flex-direction: column;
-        margin-top: 3rem;
-        width: 100%;
-
-    }
-
-
-
-
-    .parag {
-        display: none;
-    }
-
-    .img {
-        display: none;
-    }
-
-    .info {
-        width: 90%;
-    }
-
-    .team {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-    }
-}
-
-@media screen and (max-width: 500px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    .contact {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .parag {
-        display: none;
-    }
-
-    .img {
-        display: none;
-    }
-
-    .info {
-        width: 40%;
-    }
-
-    .team {
-        display: flex;
-        flex-direction: column;
-        width: 40%;
+        width: 85%;
     }
 }

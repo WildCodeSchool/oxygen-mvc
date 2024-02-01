@@ -131,7 +131,7 @@ CREATE TABLE `contact` (
  `firstName` VARCHAR(150) NOT NULL,
  `lastName` VARCHAR(150) NOT NULL,
  `email` VARCHAR(255) NOT NULL,
- `phone` VARCHAR(10) NOT NULL,
+ `phone` INT NOT NULL,
  `message` VARCHAR(5000) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
