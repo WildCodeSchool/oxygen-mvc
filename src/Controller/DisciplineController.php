@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\FormationManager;
+
 class DisciplineController extends AbstractController
 {
     /**
@@ -9,9 +11,12 @@ class DisciplineController extends AbstractController
      */
     public function index(): string
     {
-        $name = 'Oxygen';
+
+        $coursesMananager = new FormationManager();
+        $courses = $coursesMananager->selectAll();
+
         return $this->twig->render('discipline/index.html.twig', [
-            'discipline' => $name,
+            'courses' => $courses,
         ]);
     }
 }

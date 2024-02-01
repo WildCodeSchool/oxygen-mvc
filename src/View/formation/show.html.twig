@@ -1,0 +1,73 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/formation.css">
+    {{parent()}}
+{% endblock %}
+
+{% block content %}
+    <main>
+        <!-- debut de section formation description  -->
+        <section class="formation-description grid">
+
+    
+            <!-- debut de section formation description  -->
+            <div class="formation-description-text">
+                <h1>&quot; formation {{formation.name}} &quot; </h1>
+                <article>
+                    {{formation.description}}
+                </article>
+            </div>
+            <!-- fin de formation description text -->
+            <div class="formation-infos-description">
+                <div><i class="ri-hourglass-line"></i>" {{formation.duration}}"</div>
+                <div><i class="ri-map-pin-line"></i>" {{formation.location}}"</div>
+                <div><i class="ri-calendar-2-line"></i>" {{formation.date}}"</div>
+                <div><i class="ri-graduation-cap-line"></i>" {{formation.degree}}"</div>
+                <div><i class="ri-money-euro-circle-line"></i>" {{formation.financing_supported}}"</div>
+            </div>
+            <!-- fin de formation description infos -->
+
+            <!-- debut de formation description form -->
+            <div class="form">
+                <h2>Inscrivez </h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Prenom</legend>
+                        <input type="text" name="name" id="">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Nom </legend>
+                        <input type="text" name="prenom" id="">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Date de naissance</legend>
+                        <input type="text" name="name" id="">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Email</legend>
+                        <input type="text" name="name" id="">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tel</legend>
+                        <input type="text" name="name" id="">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Sex</legend>
+                        <input type="text" name="name" id="">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Niveau detudes</legend>
+                        <input type="text" name="name" id="">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Message</legend>
+                        <textarea name="message" id="" cols="30" rows="10">
+            
+                        </textarea>
+                    </fieldset>
+                    <input type="submit" value="S'inscrire">
+                </form>
+            </div>
+            <!-- fin de formation description form -->
+        </section>
+    </main>
+{% endblock %}

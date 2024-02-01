@@ -9,7 +9,9 @@
 return [
     '' => ['HomeController', 'index',],
     'items' => ['ItemController', 'index',],
+    'formation' => ['FormationController', 'show',['id'] ],
     'discipline' => ['DisciplineController', 'index',],
+    'discipline/show' => ['DisciplineController', 'show',['id']],
     'contact' => ['ContactController', 'index'],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
