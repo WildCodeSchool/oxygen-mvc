@@ -169,32 +169,32 @@ ALTER TABLE `Student_Reviews`
 -- Contenu de la table `Discipline`
 --
 
-INSERT INTO `Discipline` (`id`, 'icon', 'name', 'description') VALUES
-(1, 'fa-laptop-code', 'Informatique', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
-(2, 'fa-pen-nib', 'Design', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
-(3, 'fa-money-bill-trend-up', 'Finance', 'Nos formations en finance vous permettront d’acquérir une culture économique et financière solide.'),
-(4, 'fa-chart-simple', 'Marketing', 'Trouvez votre formation marketing idéale parmi une large sélection de formations.'),
-(5, 'fa-notes-medical', 'Santé', 'Découvrez toutes nos formations destinées aux professionnels médicaux et paramédicaux.');
+INSERT INTO `Discipline` ('icon', 'name', 'description') VALUES
+('fa-laptop-code', 'Informatique', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
+('fa-pen-nib', 'Design', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
+('fa-money-bill-trend-up', 'Finance', 'Nos formations en finance vous permettront d’acquérir une culture économique et financière solide.'),
+('fa-chart-simple', 'Marketing', 'Trouvez votre formation marketing idéale parmi une large sélection de formations.'),
+('fa-notes-medical', 'Santé', 'Découvrez toutes nos formations destinées aux professionnels médicaux et paramédicaux.');
 --
 -- Contenu de la table `Student`
 --
 
-INSERT INTO `Student` (`id`, `firstName`, `lastName`, `email`, `tel`, `degree`, `birthday`, `address`, `avatar_image`) VALUES
-(1, 'Asma', 'Jaballah', 'asma@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'asma.jpg'),
-(2, 'Kevin', 'Girault', 'kevin@gmail.com', 1234567890, 'Master', '1986-01-01', 'Etrangers', 'https://media.licdn.com/dms/image/D5603AQFzhJJ8v2K2QQ/profile-displayphoto-shrink_800_800/0/1685949560183?e=1711584000&v=beta&t=PLV-fVRuPbBUAdYOBGV1M3TFo-ao0k0nAEW-6jfBrOk'),
-(3, 'Joël', 'Mayemba', 'joel@gmail.com', 1234567890, 'Master', '1995-01-01', 'Paris', 'https://media.licdn.com/dms/image/D4E03AQF_1iyiRToEHQ/profile-displayphoto-shrink_800_800/0/1701904115437?e=1711584000&v=beta&t=z3HTNjBHIO5npMAXU5A5VhmRBrHwu499FrSaqgjnkoY'),
-(4, 'Lucas', 'Boillot', 'lucas@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://avatars.githubusercontent.com/u/25879136?v=4'),
-(5, 'Quentin', 'Guillemineau', 'Quentin@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://i.postimg.cc/66b3Cffp/Quentin.png'),
-(6, 'Yazid', 'Sefsaf', 'Yazid@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://cdn.discordapp.com/attachments/1186683768640122982/1187052343859089549/ayzd.jpg?ex=65c3a025&is=65b12b25&hm=4fc40165ef44b2f148d9f1be816925f478fa227452980b207de6b157007b3af8&');
+INSERT INTO `Student` (`firstName`, `lastName`, `email`, `tel`, `degree`, `birthday`, `address`, `avatar_image`) VALUES
+( 'Asma', 'Jaballah', 'asma@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'asma.jpg'),
+( 'Kevin', 'Girault', 'kevin@gmail.com', 1234567890, 'Master', '1986-01-01', 'Etrangers', 'https://media.licdn.com/dms/image/D5603AQFzhJJ8v2K2QQ/profile-displayphoto-shrink_800_800/0/1685949560183?e=1711584000&v=beta&t=PLV-fVRuPbBUAdYOBGV1M3TFo-ao0k0nAEW-6jfBrOk'),
+( 'Joël', 'Mayemba', 'joel@gmail.com', 1234567890, 'Master', '1995-01-01', 'Paris', 'https://media.licdn.com/dms/image/D4E03AQF_1iyiRToEHQ/profile-displayphoto-shrink_800_800/0/1701904115437?e=1711584000&v=beta&t=z3HTNjBHIO5npMAXU5A5VhmRBrHwu499FrSaqgjnkoY'),
+( 'Lucas', 'Boillot', 'lucas@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://avatars.githubusercontent.com/u/25879136?v=4'),
+('Quentin', 'Guillemineau', 'Quentin@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://i.postimg.cc/66b3Cffp/Quentin.png'),
+('Yazid', 'Sefsaf', 'Yazid@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://cdn.discordapp.com/attachments/1186683768640122982/1187052343859089549/ayzd.jpg?ex=65c3a025&is=65b12b25&hm=4fc40165ef44b2f148d9f1be816925f478fa227452980b207de6b157007b3af8&');
 
 --
 -- Contenu de la table `Les_eleves_d_Oxygen_School_temoignent`
 --
 
-INSERT INTO `Student_Reviews` (`id`, `student_id`, `testimonial`) VALUES
-(1, 1, 'Je suis arrivée chez la wild avec la conviction que le design est ma vocation professionnelle. Nous sommes une petite promo qui se soutient beaucoup et cela me permet de rester très motivée et gagner confiance en moi pour réussir !'),
-(2, 2, 'Le fait que la formation passe beaucoup par la pratique était très important pour moi, je pense que c’est de cette façon que l’on assimile le mieux.'),
-(3, 3, 'On n’apprend pas un langage par cœur, mais davantage comment on devient développeur et on se dote d’outils pour être capable d’apprendre en permanence.'),
-(4, 4, 'Je n’ai jamais porté une grande importance aux diplômes, mais plutôt à mes compétences, à ce que je suis capable de faire concrètement. Je cherchais à allier la partie technique et le côté relationnel et fonctionnel dans la suite de ma carrière'),
-(5, 5, 'C’était très intense, j’ai eu une promotion en or et beaucoup d’entraide et ça ça a été très important.'),
-(6, 6, 'Peu importe ce que l’on a fait avant, c’est toujours une force, et non une faiblesse.');
+INSERT INTO `Student_Reviews` (`student_id`, `testimonial`) VALUES
+( 1, 'Je suis arrivée chez la wild avec la conviction que le design est ma vocation professionnelle. Nous sommes une petite promo qui se soutient beaucoup et cela me permet de rester très motivée et gagner confiance en moi pour réussir !'),
+( 2, 'Le fait que la formation passe beaucoup par la pratique était très important pour moi, je pense que c’est de cette façon que l’on assimile le mieux.'),
+( 3, 'On n’apprend pas un langage par cœur, mais davantage comment on devient développeur et on se dote d’outils pour être capable d’apprendre en permanence.'),
+( 4, 'Je n’ai jamais porté une grande importance aux diplômes, mais plutôt à mes compétences, à ce que je suis capable de faire concrètement. Je cherchais à allier la partie technique et le côté relationnel et fonctionnel dans la suite de ma carrière'),
+( 5, 'C’était très intense, j’ai eu une promotion en or et beaucoup d’entraide et ça ça a été très important.'),
+( 6, 'Peu importe ce que l’on a fait avant, c’est toujours une force, et non une faiblesse.');
