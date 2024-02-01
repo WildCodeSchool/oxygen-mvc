@@ -1,5 +1,4 @@
 .card-review {
-    overflow: hidden;
     padding: 2rem;
     background-color: rgba(67, 159, 212, 0.11);
     width: 450px;
@@ -14,6 +13,7 @@
 
 .card-review .std-mess {
     margin-top: 0;
+    font-size: .8rem;
     line-height: 1.5;
 }
 

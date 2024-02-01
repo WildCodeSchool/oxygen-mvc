@@ -1,12 +1,12 @@
 <div class="card-review">
     <i class="fa-solid fa-quote-left"></i>
-    <p class="std-mess">discipline.description</p>
+    <p class="std-mess">{{ student.testimonial }}</p>
     
     <div class="user-container">
-        <img class="user-ava" src="https://media.licdn.com/dms/image/D4E03AQGj9nhRHrjBzQ/profile-displayphoto-shrink_800_800/0/1684840480045?e=1712188800&v=beta&t=Y_dABFY94yxvlDfcQT7XR3X2_onGQlIdKh66PcS_v-c" alt="avatar">
+        <img class="user-ava" src='{{ student.avatar_image }}' alt="avatar">
         <div class="user-info">
-            <h3>Name</h3>
-            <p>Degree</p>
+            <h3>{{ student.firstName }}</h3>
+            <p>{{ student.degree }}</p>
         </div>
     </div>
 </div>
