@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class DisciplineManager extends AbstractManager
+class FormationManager extends AbstractManager
 {
     public const TABLE = 'Course';
 
