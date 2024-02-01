@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Model\DisciplineManager;
-
 use App\Model\StudentManager;
 
 class HomeController extends AbstractController

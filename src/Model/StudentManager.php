@@ -17,5 +17,4 @@ class StudentManager extends AbstractManager
 
         return $this->pdo->query($query)->fetchAll();
     }
-
 }
