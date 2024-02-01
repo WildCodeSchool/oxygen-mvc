@@ -95,6 +95,7 @@ form input {
     border: none;
     width: 100%;
     font-size: 1.3rem;
+    background-color: #f7f7f7;
 }
 
 form fieldset {
@@ -113,13 +114,16 @@ form input:focus {
 }
 
 form input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--principal-color);
-    width: 120px;
+    width: 130px;
     padding: 10px;
     border-radius: 10px;
     color: var(--white-color);
     font-weight: var(--font-weight);
-    margin: 0;
+    margin: 0 auto;
 }
 
 form fieldset textarea {
@@ -128,6 +132,7 @@ form fieldset textarea {
     resize: none;
     width: 100%;
     overflow: auto;
+    background-color: var(--primary-color);
 }
 
 form fieldset:focus {
