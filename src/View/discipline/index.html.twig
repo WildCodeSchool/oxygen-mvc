@@ -8,21 +8,21 @@
         <section class="section grid">
             <h1 class="formation-title">Nos formations</h1>
 
-        {% for discipline in courses %}
+        {% for course in courses %}
              <div class="formation-components">
                 <!--debut de formation text qui contient title description et bouton  -->
                 <div class="formation-text">
-                    <span> <img src="/assets/images/{{ discipline.url_img }}" width="50px" height="50px" alt="dinwi"> <h2>{{ discipline.name}}</h2></span>
-                    <p>{{ discipline.description}}.</p>
-                    <a href="formation?id={{ discipline.id}}">Postuler</a>
+                    <span> <img src="/assets/images/{{ course.url_image }}" width="50px" height="50px" alt="dinwi"> <h2>{{ course.name }}</h2></span>
+                    <p>{{ course.description}}.</p>
+                    <a href="formation?id={{ course.id}}">Postuler</a>
                 </div>
                 <div class="formation-infos">
                     <ul>
-                        <li><i class="ri-hourglass-line"></i>{{ discipline.duration}}</li>
-                        <li><i class="ri-map-pin-line"></i>{{ discipline.location}}</li>
-                        <li><i class="ri-calendar-2-line"></i>{{ discipline.date}}</li>
-                        <li><i class="ri-graduation-cap-line"></i>{{ discipline.degree}}</li>
-                        <li><i class="ri-money-euro-circle-line"></i>{{ discipline.financing_supported}}prise en charge</li>
+                        <li><i class="ri-hourglass-line"></i>{{ course.duration}}</li>
+                        <li><i class="ri-map-pin-line"></i>{{ course.location}}</li>
+                        <li><i class="ri-calendar-2-line"></i>{{ course.date}}</li>
+                        <li><i class="ri-graduation-cap-line"></i>{{ course.degree}}</li>
+                        <li><i class="ri-money-euro-circle-line"></i>{{ course.financing_supported}}prise en charge</li>
                     </ul>
                 </div>
             </div>
