@@ -24,7 +24,7 @@ class HomeController extends AbstractController
         $studentManager = new StudentManager();
 
         // Get all student reviews with associated student data
-        $students = $studentManager->selectAllWithStudent();
+        $students = $studentManager->getAllStudentWithReviews();
 
         return $this->twig->render('Home/index.html.twig', [
             'name' => $name,

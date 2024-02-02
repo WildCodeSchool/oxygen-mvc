@@ -4,17 +4,34 @@ namespace App\Model;
 
 class StudentManager extends AbstractManager
 {
-    public const TABLE = 'Student_Reviews';
+    public const TABLE = 'student';
 
     /**
-     * Get all student reviews with associated student data
+     * Get all students from database
      */
-    public function selectAllWithStudent(): array
+    public function getAllStudents(): array
     {
-        $query = 'SELECT sr.*, s.*
-        FROM ' . self::TABLE . ' sr
-        JOIN student s ON sr.student_id = s.id';
-
-        return $this->pdo->query($query)->fetchAll();
+        return $this->selectAll();
     }
+    // Get all reviews of a student by their ID
+    public function getStudentReviews($studentId): ?string
+    {
+        $query = 'SELECT testimonial FROM Student_Reviews WHERE student_id = :id';
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue('id', $studentId, \PDO::PARAM_INT);
+        $statement->execute();
+        return $statement->fetchColumn();
+    }
+
+    // Get all students with their reviews
+    public function getAllStudentWithReviews(): array
+    {
+        $students = $this->selectAll();
+        forEach ($students as &$student) {
+            $student['testimonial'] = $this->getStudentReviews($student['id']);
+        }
+        return $students;
+    }
+
+
 }
