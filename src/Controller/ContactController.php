@@ -17,7 +17,7 @@ class ContactController extends AbstractController
             $contact = array_map('trim', $_POST);
 
             // TODO validations (length, format...)
-            
+
 
             // if validation is ok, insert and redirection
             $contactManager = new ContactManager();
