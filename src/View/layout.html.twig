@@ -6,16 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/assets/images/favicon.png">
 
-    <title>{% block title %}{% endblock %}</title>
-
+    <title>{% block title %}{{ name }}{% endblock %}</title>
+    
+    
+    {% block stylesheet %}
     <link rel="stylesheet" href="/assets/css/style.css">
-    {% block stylesheet %}{% endblock %}
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 </head>
 
 <body>
-    {% block content %}{% endblock %}
-    {% block javascript %}{% endblock %}
+    {% include 'components/navbar.html.twig' %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    {% include 'components/footer.html.twig' %}
+    {% include 'components/btn-back-toTop.html.twig' %}
+
+    {% block javascript %}
+    <script src="https://kit.fontawesome.com/b51dcfdd20.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    {% endblock %}
 </body>
 </html>
-
-

@@ -1,0 +1,39 @@
+ {% extends "layout.html.twig" %}
+    {% block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/assets/css/discipline.css">
+    {% endblock %}
+
+{% block title %}Page discipline{% endblock %}
+{% block content %}
+ <!-- debut de formation main  -->
+    <main class="main">
+        <section class="section grid">
+            <h1 class="formation-title">Nos formations</h1>
+
+        {% for course in courses %}
+             <div class="formation-components">
+                <!--debut de formation text qui contient title description et bouton  -->
+                <div class="formation-text">
+                    <span> <img src="/assets/images/{{ course.url_image }}" width="50px" height="50px" alt="dinwi"> <h2>{{ course.name }}</h2></span>
+                    <p>{{ course.description}}.</p>
+                    <a href="formation?id={{ course.id}}">Postuler</a>
+                </div>
+                <div class="formation-infos">
+                    <ul>
+                        <li><i class="ri-hourglass-line"></i>{{ course.duration}}</li>
+                        <li><i class="ri-map-pin-line"></i>{{ course.location}}</li>
+                        <li><i class="ri-calendar-2-line"></i>{{ course.date}}</li>
+                        <li><i class="ri-graduation-cap-line"></i>{{ course.degree}}</li>
+                        <li><i class="ri-money-euro-circle-line"></i>{{ course.financing_supported}}prise en charge</li>
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+            <!-- fin de formation components -->
+
+        </section>
+    </main>
+    <!-- fin de formation main  -->
+
+{% endblock %}

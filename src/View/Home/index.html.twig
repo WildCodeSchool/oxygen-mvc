@@ -1,6 +1,19 @@
 {% extends 'layout.html.twig' %}
-
+    {% block title %}{{ parent() }}: Home page{% endblock %}
+    {% block stylesheet %}
+        {{ parent() }}
+        <link rel="stylesheet" href="/assets/css/home/hero.css">
+        <link rel="stylesheet" href="/assets/css/home/formation.css">
+        <link rel="stylesheet" href="/assets/css/home/card-dis.css">
+        <link rel="stylesheet" href="/assets/css/home/intro-main.css">
+        <link rel="stylesheet" href="/assets/css/home/std-review.css">
+        <link rel="stylesheet" href="/assets/css/home/card-review.css">
+    {% endblock %}
 {% block content %}
-    <h1>Hello Wilder !</h1>
-    <p>Find a complete CRUD example on <a href="/items">/items</a> page.</p>
+    {% include 'components/home/hero.html.twig' %}
+    {% include 'components/home/formation.html.twig' %}
+    {% include 'components/home/intro-main.html.twig' %}
+    {% include 'components/home/std-review.html.twig' %}
 {% endblock %}
+
+
