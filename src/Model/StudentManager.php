@@ -14,7 +14,7 @@ class StudentManager extends AbstractManager
         $query = 'SELECT s.*, sr.testimonial 
                   FROM student s 
                   LEFT JOIN Student_Reviews sr ON s.id = sr.student_id';
-        
+
         $statement = $this->pdo->query($query);
         $students = $statement->fetchAll(\PDO::FETCH_ASSOC);
 
