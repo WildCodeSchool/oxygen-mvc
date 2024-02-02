@@ -138,7 +138,7 @@ CREATE TABLE `Student_Reviews` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Structure de la table `Les_eleves_d_Oxygen_School_temoignent`
+-- Structure de la table `Contact`
 --
 
 CREATE TABLE `contact` (
