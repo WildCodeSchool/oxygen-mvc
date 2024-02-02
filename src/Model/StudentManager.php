@@ -11,25 +11,13 @@ class StudentManager extends AbstractManager
      */
     public function getAllStudents(): array
     {
-        return $this->selectAll();
-    }
-    // Get all reviews of a student by their ID
-    public function getStudentReviews($studentId): ?string
-    {
-        $query = 'SELECT testimonial FROM Student_Reviews WHERE student_id = :id';
-        $statement = $this->pdo->prepare($query);
-        $statement->bindValue('id', $studentId, \PDO::PARAM_INT);
-        $statement->execute();
-        return $statement->fetchColumn();
-    }
+        $query = 'SELECT s.*, sr.testimonial 
+                  FROM student s 
+                  LEFT JOIN Student_Reviews sr ON s.id = sr.student_id';
+        
+        $statement = $this->pdo->query($query);
+        $students = $statement->fetchAll(\PDO::FETCH_ASSOC);
 
-    // Get all students with their reviews
-    public function getAllStudentWithReviews(): array
-    {
-        $students = $this->selectAll();
-        foreach ($students as &$student) {
-            $student['testimonial'] = $this->getStudentReviews($student['id']);
-        }
         return $students;
     }
 }
