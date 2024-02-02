@@ -157,12 +157,12 @@ INSERT INTO `Discipline` (`icon`, `name`, `description`) VALUES
 --
 
 INSERT INTO `Student` (`firstName`, `lastName`, `email`, `tel`, `degree`, `birthday`, `address`, `avatar_image`) VALUES
-('Asma', 'Jaballah', 'asma@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'asma.jpg'),
-('Kevin', 'Girault', 'kevin@gmail.com', 1234567890, 'Master', '1986-01-01', 'Etrangers', 'https://media.licdn.com/dms/image/D5603AQFzhJJ8v2K2QQ/profile-displayphoto-shrink_800_800/0/1685949560183?e=1711584000&v=beta&t=PLV-fVRuPbBUAdYOBGV1M3TFo-ao0k0nAEW-6jfBrOk'),
-('Joël', 'Mayemba', 'joel@gmail.com', 1234567890, 'Master', '1995-01-01', 'Paris', 'https://media.licdn.com/dms/image/D4E03AQF_1iyiRToEHQ/profile-displayphoto-shrink_800_800/0/1701904115437?e=1711584000&v=beta&t=z3HTNjBHIO5npMAXU5A5VhmRBrHwu499FrSaqgjnkoY'),
-('Lucas', 'Boillot', 'lucas@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://avatars.githubusercontent.com/u/25879136?v=4'),
-('Quentin', 'Guillemineau', 'Quentin@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://i.postimg.cc/66b3Cffp/Quentin.png'),
-('Yazid', 'Sefsaf', 'Yazid@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://cdn.discordapp.com/attachments/1186683768640122982/1187052343859089549/ayzd.jpg?ex=65c3a025&is=65b12b25&hm=4fc40165ef44b2f148d9f1be816925f478fa227452980b207de6b157007b3af8&');
+('Asma', 'Jaballah', 'asma@gmail.com', 1234567890, 'PO Marketing', '1990-01-01', 'Paris', 'https://media.licdn.com/dms/image/D4E03AQGj9nhRHrjBzQ/profile-displayphoto-shrink_800_800/0/1684840480045?e=1712188800&v=beta&t=Y_dABFY94yxvlDfcQT7XR3X2_onGQlIdKh66PcS_v-c'),
+('Kevin', 'Girault', 'kevin@gmail.com', 1234567890, 'Junior Dev Web', '1986-01-01', 'Etrangers', 'https://media.licdn.com/dms/image/D5603AQFzhJJ8v2K2QQ/profile-displayphoto-shrink_800_800/0/1685949560183?e=1711584000&v=beta&t=PLV-fVRuPbBUAdYOBGV1M3TFo-ao0k0nAEW-6jfBrOk'),
+('Joël', 'Mayemba', 'joel@gmail.com', 1234567890, 'Bac+3 ReactJs', '1995-01-01', 'Paris', 'https://media.licdn.com/dms/image/D4E03AQF_1iyiRToEHQ/profile-displayphoto-shrink_800_800/0/1701904115437?e=1711584000&v=beta&t=z3HTNjBHIO5npMAXU5A5VhmRBrHwu499FrSaqgjnkoY'),
+('Lucas', 'Boillot', 'lucas@gmail.com', 1234567890, 'Angular Professor', '1990-01-01', 'Paris', 'https://avatars.githubusercontent.com/u/25879136?v=4'),
+('Quentin', 'Guillemineau', 'Quentin@gmail.com', 1234567890, 'Data Engineer', '1990-01-01', 'Paris', 'https://i.postimg.cc/66b3Cffp/Quentin.png'),
+('Yazid', 'Sefsaf', 'Yazid@gmail.com', 1234567890, 'Big Data Junior', '1990-01-01', 'Paris', 'https://cdn.discordapp.com/attachments/1186683768640122982/1187052343859089549/ayzd.jpg?ex=65c3a025&is=65b12b25&hm=4fc40165ef44b2f148d9f1be816925f478fa227452980b207de6b157007b3af8&');
 
 --
 -- Contenu de la table `Les_eleves_d_Oxygen_School_temoignent`

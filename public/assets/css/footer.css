@@ -2,14 +2,15 @@ footer {
     transform: translateY(40px);
     background-color: black;
     color: white;
-    padding: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 ul {
     list-style: none;
 }
 
-footer p {
+footer .des-footer {
     color: rgb(254, 255, 255);
     display: flex;
     align-items: center;
@@ -19,9 +20,8 @@ footer p {
 }
 
 footer .footer-title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 28px;
-    color: rgb(52, 171, 231);
+    font-weight: 600;
 }
 
 footer .footer {
@@ -31,7 +31,6 @@ footer .footer {
 }
 
 .footer .footer-top {
-    display: grid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,8 +59,8 @@ footer .footer {
     color: #000;
 }
 
-.form-footer button {
-    background-color: #00f;
+.form-footer .btn-footer {
+    background-color: #60A5FA;
     color: #fff;
     padding-left: 24px;
     padding-right: 24px;
@@ -75,18 +74,18 @@ footer .footer {
 
 /* Additional styles for button hover effect */
 
-.form-footer button:hover {
+
+.form-footer .btn-footer:hover {
     background-color: #0056b3;
-    /* darker shade of blue */
 }
 
 .footer-bottom {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
-    margin-top: 40px;
+    padding: 5rem;
 }
 
 .footer-bottom .picture {
@@ -94,12 +93,24 @@ footer .footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
-.footer-bottom img {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
+#social {
+    margin: 0;
+    color: #60A5FA;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+#social i {
+    font-size: 25px;
+    cursor: pointer;
 }
 
 .footer-cards {
@@ -114,13 +125,11 @@ footer .footer {
 }
 
 .footer-cards a {
-    color: white;
     text-decoration: none;
 }
 
-#social {
-    display: flex;
-    gap: 10px;
+.footer-cards a:hover {
+    color: #60A5FA;
 }
 
 @media screen and (min-width: 500px) and (max-width: 1050px) {
@@ -157,4 +166,32 @@ footer .footer {
         display: flex;
         flex-wrap: wrap;
     }
+}
+
+/* Button back to top */
+
+.back-to-top {
+    position: fixed;
+    bottom: 1rem;      
+    right: 1rem; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 0.75rem; 
+    border-width: 2px; 
+    border-color: var(--secondary); 
+    width: 2.5rem; 
+    height: 2.5rem; 
+    color: var(--secondary); 
+    backdrop-filter: blur(1rem);
+    box-shadow: 1rem 1.2rem 1.2rem rgba(0, 0, 0, 0.362); 
+    opacity: 0.8;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+.back-to-top i {
+    font-size: 1.5rem;
 }

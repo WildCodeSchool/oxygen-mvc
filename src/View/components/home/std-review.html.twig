@@ -1,0 +1,12 @@
+<section class="splide std-review">
+    <h2>Les élèves d’ Oxygen School temoignent  </h2>
+    <div class="splide__track">
+        <ul class="splide__list card-review-container">
+            {% for student in students %}
+                <li class="splide__slide">
+                    {% include 'components/home/card-review.html.twig' with {'student': student} %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

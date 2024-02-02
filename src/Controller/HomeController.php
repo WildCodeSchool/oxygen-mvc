@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\DisciplineManager;
+use App\Model\StudentManager;
 
 class HomeController extends AbstractController
 {
@@ -19,9 +20,16 @@ class HomeController extends AbstractController
         // Get all disciplines
         $disciplines = $disciplineManager->selectAll();
 
+        // Initialize the student review manager
+        $studentManager = new StudentManager();
+
+        // Get all student reviews with associated student data
+        $students = $studentManager->getAllStudents();
+
         return $this->twig->render('Home/index.html.twig', [
             'name' => $name,
             'disciplines' => $disciplines,
+            'students' => $students,
         ]);
     }
 }
