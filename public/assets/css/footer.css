@@ -185,7 +185,7 @@ footer .footer {
     color: #000000; 
     backdrop-filter: blur(1rem);
     box-shadow: 1rem 1.2rem 1.2rem rgba(0, 0, 0, 0.362); 
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .back-to-top:hover {
