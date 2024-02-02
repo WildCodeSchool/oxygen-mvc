@@ -1,16 +1,16 @@
 .contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    height: auto;
+    font-family: Tahoma;
+    padding-left: 17rem;
+    padding-right: 17rem;
+    padding-top: 6rem;
     background-color: var(--secondaryColor);
 }
 
-section {
-    border: 1px solid black;
-    width: 90%;
+.section {
+
+    width: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -22,7 +22,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    line-height: 1.5;
     padding-top: 1rem;
     padding-bottom: 2rem;
     margin: 0 auto;
@@ -34,8 +34,6 @@ section {
 .center {
     display: flex;
     padding-top: 1.5rem;
-    padding-left: 17rem;
-    padding-right: 17rem;
     margin: 0 auto;
     font-size: 2.5rem;
     color: rgb(89, 150, 237);
@@ -43,19 +41,18 @@ section {
 }
 
 .info {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
     border: solid #32a1ce;
     border-radius: 90px;
     color: rgb(10, 10, 10);
-    display: block;
-    gap: 13px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    margin-left: 17rem;
-    padding-left: 3rem;
+    padding-left: 2rem;
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 3rem;
-    margin-right: 20rem;
     font-size: 26px;
     background-color: #ffffff;
 }
@@ -69,8 +66,8 @@ section {
 
 .img {
     float: left;
-    padding-left: 2rem;
-    padding-right: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 0.5rem;
 }
 
@@ -84,15 +81,10 @@ section {
     font-weight: bold;
 }
 
-.bloc {
-    padding-left: 17rem;
-    padding-right: 17rem;
-}
 
 .team {
     display: flex;
-    border: 1px solid black;
-    width: 70%;
+    width: 100%;
     gap: 10px;
     margin: 0 auto;
 }
@@ -118,18 +110,31 @@ section {
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 4px;
+
+
+
 }
 
-label {
+.label {
     font-size: 20px;
     font-style: italic;
     font-family: var(--principalFontFamily);
     color: rgb(33, 17, 97);
     font-display: center;
+    padding-top: 1rem;
+    margin-top: 2rem;
     padding-right: 3rem;
+
 }
 
-button {
+::placeholder {
+    color: rgb(171, 171, 220);
+    font-size: 1rem;
+    font-style: oblique;
+
+}
+
+.button {
     display: inline-block;
     background-color: rgb(173, 218, 247);
     border: 2px solid rgb(50, 162, 237);
@@ -143,168 +148,74 @@ button {
     padding-right: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin-left: 10rem;
+    margin-left: 14rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 .form {
-    width: 70%;
-    margin: 0 auto;
-    border: 1px solid black;
-}
-
-form {
-    display: grid;
-    border: 1px solid black;
-}
-
-form input {
-    border: none;
     width: 100%;
+    margin: 0 auto;
+    border-spacing: 5px 1rem;
+}
+
+
+
+
+.input {
+    border: solid #32a1ce;
+    width: 96%;
+    border-radius: 5px;
+    padding-left: 0.2rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(242, 239, 239);
+    margin-left: 3px;
+    border: 2px solid #1a0188;
+
     font-size: 1.3rem;
 }
 
-form fieldset {
-    padding: 1rem;
-    border: 1px solid #23A6F0;
-}
 
-form fieldset legend {
-    position: relative;
-    padding-right: 3.5rem;
-    left: 2rem;
-}
+@media screen and (min-width: 200px) and (max-width: 1050px) {
 
-form input:focus {
-    outline: none;
-}
-
-form input[type="submit"] {
-    background-color: var(--principal-color);
-    width: 120px;
-    padding: 10px;
-    border-radius: 10px;
-    color: var(--white-color);
-    font-weight: var(--font-weight);
-    margin: 0;
-}
-
-form fieldset textarea {
-    text-align: left;
-    border: none;
-    resize: none;
-    width: 100%;
-    overflow: auto;
-}
-
-form fieldset:focus {
-    border: 3px solid black;
-}
-
-form fieldset textarea:focus {
-    outline: none;
-    border: none;
-    font-size: 1rem;
-}
-
-@media screen and (min-width: 500px) and (max-width: 1050px) {
     * {
         margin: 0;
         padding: 0;
     }
 
-    section {
-        border: 1px solid black;
-        width: 90%;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-    }
-
     .contact {
         display: flex;
         flex-direction: column;
-    }
+        margin-top: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
 
-    .parag {
-        display: none;
-    }
-
-    .info {
-        width: 40%;
-    }
-
-    .team {
-        display: flex;
-        flex-direction: column;
-        width: 40%;
-    }
-}
-
-@media screen and (min-width: 300px) and (max-width: 700px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    section {
-        border: 1px solid black;
-        width: 90%;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-    }
-
-    .contact {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem 0;
-    }
-
-    .parag {
-        display: none;
     }
 
     .img {
         display: none;
     }
 
-    .info {
-        width: 30%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    .contact {
-        display: flex;
-        flex-direction: column;
+    .button {
+        margin-left: 5rem;
     }
 
     .parag {
         display: none;
     }
 
-    .img {
-        display: none;
-    }
-
     .info {
-        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+        width: 60%;
     }
 
     .team {
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 85%;
     }
 }
