@@ -27,11 +27,9 @@ class StudentManager extends AbstractManager
     public function getAllStudentWithReviews(): array
     {
         $students = $this->selectAll();
-        forEach ($students as &$student) {
+        foreach ($students as &$student) {
             $student['testimonial'] = $this->getStudentReviews($student['id']);
         }
         return $students;
     }
-
-
 }
