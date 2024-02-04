@@ -14,4 +14,7 @@ return [
     'contact' => ['ContactController', 'index'],
     'admin' => ['AdminController', 'index'],
     'admin/discipline' => ['AdminController', 'discipline'],
+    'admin/formation' => ['AdminController', 'formation'],
+    'admin/student' => ['AdminController', 'student'],
+    'admin/message' => ['AdminController', 'message'],
 ];
