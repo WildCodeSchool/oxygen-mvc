@@ -18,4 +18,31 @@ document.addEventListener( 'DOMContentLoaded', function() {
         arrows: false,     
     });
     splide.mount();
+
+});
+
+// SETUP OPTION SLIDE SWIPER
+const swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 2,
+    loop: true,
+    speed: 600,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 10,
+      stretch: 120,
+      depth: 200,
+      modifier: 1,
+      slideShadows: false,
+    },
+    on: {
+      click(event) {
+        swiper.slideTo(this.clickedIndex);
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
 });

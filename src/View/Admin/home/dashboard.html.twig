@@ -8,7 +8,39 @@
     <section class="main-admin">
         <div class="main-das">
             {% include 'components/admin/nav-das.html.twig' %}
-            <p>This is Main</p>
+            <div class="content-das">
+                <div class="left-content">
+                    <div class="slider-container">
+                        <h1>All Disciplines</h1>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                {% for discipline in disciplines %}
+                                    <div class="swiper-slide">
+                                        {% include 'components/admin/card-swiper.html.twig' with {'discipline': discipline} %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <h1>All Students: {{ totalStudent }}</h1>
+                    <div class="student-das splide">
+                        <div class="splide__track">
+                            <ul class="splide__list containers">
+                                {% for student in students %}
+                                    <li class="splide__slide">
+                                        {% include 'components/admin/student-card.html.twig' with {'student': student} %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+{% endblock %}
+{% block javascript %}
+    {{ parent() }}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 {% endblock %}

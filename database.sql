@@ -86,7 +86,7 @@ CREATE TABLE `Student` (
 CREATE TABLE `Course` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
-  `description` VARCHAR(150) NOT NULL,
+  `description` VARCHAR(1500) NOT NULL,
   `capacity` VARCHAR(150) NOT NULL,
   `location` VARCHAR(100),
   `date` DATE NOT NULL,
@@ -94,7 +94,7 @@ CREATE TABLE `Course` (
   `degree` VARCHAR(100) NOT NULL,
   `financing_supported` BOOLEAN,
   `discipline_id` INT,
-  `url_image` VARCHAR(255),
+  `url_image` VARCHAR(755),
   PRIMARY KEY (`id`),
   FOREIGN KEY (`discipline_id`) REFERENCES `Discipline`(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -108,6 +108,7 @@ CREATE TABLE `Discipline` (
   `icon` VARCHAR(100) NOT NULL,
   `name` VARCHAR(100) NOT NULL,
   `description` VARCHAR(5000) NOT NULL,
+  `url_img` VARCHAR(500),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 --
@@ -146,12 +147,12 @@ CREATE TABLE `contact` (
 -- Contenu de la table `Discipline`
 --
 
-INSERT INTO `Discipline` (`icon`, `name`, `description`) VALUES
-('fa-laptop-code', 'Informatique', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
-('fa-pen-nib', 'Design', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
-('fa-money-bill-trend-up', 'Finance', 'Nos formations en finance vous permettront d’acquérir une culture économique et financière solide.'),
-('fa-chart-simple', 'Marketing', 'Trouvez votre formation marketing idéale parmi une large sélection de formations.'),
-('fa-notes-medical', 'Santé', 'Découvrez toutes nos formations destinées aux professionnels médicaux et paramédicaux.');
+INSERT INTO `Discipline` (`icon`, `name`, `description`, `url_img`) VALUES
+('fa-laptop-code', 'Informatique', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.', 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+('fa-pen-nib', 'Design', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.', 'https://i0.wp.com/mappingmotion.com/wp-content/uploads/2022/07/5feb0f4527cc9976b63dd88c_big-bang-mockup.png?w=1169&ssl=1'),
+('fa-money-bill-trend-up', 'Finance', 'Nos formations en finance vous permettront d’acquérir une culture économique et financière solide.', 'https://static3.cegos.fr/content/uploads/2019/09/11142555/les-metiers-de-la-finance.jpg.webp'),
+('fa-chart-simple', 'Marketing', 'Trouvez votre formation marketing idéale parmi une large sélection de formations.', 'https://d1rluokkqqu56n.cloudfront.net/wpapp/uploads/2022/02/12081839/marketing-digital-1620x1080.jpeg'),
+('fa-notes-medical', 'Santé', 'Découvrez toutes nos formations destinées aux professionnels médicaux et paramédicaux.', 'https://www.ifc.org/content/dam/ifc/migration/Health_Background_Nov21.jpg');
 --
 -- Contenu de la table `Student`
 --
@@ -175,3 +176,26 @@ INSERT INTO `Student_Reviews` (`student_id`, `testimonial`) VALUES
 (4, 'Je n’ai jamais porté une grande importance aux diplômes, mais plutôt à mes compétences, à ce que je suis capable de faire concrètement. Je cherchais à allier la partie technique et le côté relationnel et fonctionnel dans la suite de ma carrière'),
 (5, 'C’était très intense, j’ai eu une promotion en or et beaucoup d’entraide et ça ça a été très important.'),
 (6, 'Peu importe ce que l’on a fait avant, c’est toujours une force, et non une faiblesse.');
+
+
+--
+-- Contenu de la table `Course`
+--
+
+INSERT INTO `Course` (`id` , `name` , `description` , `capacity` , `location`, `date`, `duration` , `degree` , `financing_supported` , `discipline_id`, `url_image`) VALUES 
+('1', 'Web Designer', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 20, 'Paris', '2024-7-01', '5 mois', 'Bac +2', 100, 1, 'https://www.ntc.edu/sites/default/files/styles/full_width_16_9/public/2021-06/web-design-header.jpg?itok=4d7TmUMl'),
+('2', 'Python Developer', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-9-01', '3 mois', 'Bac +3', 100, 1, 'https://blog.eduonix.com/wp-content/uploads/2018/09/Scientific-Python-Scipy-696x500.jpg'),
+('3', 'Data Analyst', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 15, 'Paris', '2024-4-01', '8 mois', 'Bac', 100, 1, 'https://www.ntc.edu/sites/default/files/styles/full_width_16_9/public/2021-06/software-development-specialist.jpg?itok=D8qgVwxb'),
+('4', 'PHP Developer', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 16, 'Paris', '2024-3-01', '3 mois', 'Bac +2', 100, 1, 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4Pn8gc6rJbSkB86v02ZHpzR9dQD-F6uvOKMZ7bEqVkczQu5WPVTMB2GBXHG9dJnB97DWAhmlSrVEgIvnI3e8AoFf9Z9oeBFm533Bpm-YY1Fs7_CLi6Cw3XkUsezJTDRZyJHt-9Lk-g6Ujrxm6kpLOirbmcqtL6UdOaCk_Z3XGfwf7D2sHXIFBd997/s1000/hiring-PHP-developer.jpg'),
+('5', 'Data Scientist', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 10, 'Paris', '2024-5-01', '5 mois', 'Bac +5', 100, 2, 'https://www.michaelpage.fr/sites/michaelpage.fr/files/legacy/shutterstock_1100046194_970x480.jpg'),
+('6', 'Designer', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-6-01', '3 mois', 'Bac +2', 100, 2, 'https://ascentcomputer.co.in/wp-content/uploads/2021/06/WEB_FINAL.png'),
+('7', 'Figma Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 18, 'Paris', '2024-4-01', '12 mois', 'Bac +5', 100, 2, 'https://assets-global.website-files.com/648b07b602810d848d5617a5/651f5ba7e58bbd0d7c9f683d_00_7_Best_Figma_Courses.jpg'),
+('8', 'PhotoShop Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-9-01', '8 mois', 'Bac +2', 100, 2, 'https://i0.wp.com/www.admecindia.co.in/wp-content/uploads/2020/01/Adobe-Photoshop-Master-Course.jpg?fit=390%2C355&ssl=1'),
+('9', 'Auditeur', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-6-01', '6 mois', 'Bac +2', 100, 3, 'https://www.3foldtraining.com/wp-content/uploads/2021/09/ISO-9001-QMS-Internal-Auditor-Course-in-Mumbai-900x500.jpg'),
+('10', 'Comptabilité', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 14, 'Paris', '2024-6-01', '3 mois', 'Bac', 100, 3, 'https://youmatter.world/app/uploads/sites/3/2016/11/Comptabilite-performance-globale-rse.jpg'),
+('11', 'SAGE Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 16, 'Paris', '2024-8-01', '5 mois', 'Bac', 100, 3, 'https://www.fctraining.org/img/sage-training.webp'),
+('12', 'Marketing Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-10-01', '12 mois', 'Bac +2', 100, 4, 'https://jupitervidya.com/wp-content/uploads/2015/05/Digital-Marketing-course-in-Whitefield.jpg'),
+('13', 'Webmarketing', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 15, 'Paris', '2024-6-01', '3 mois', 'Bac +5', 100, 4, 'https://www.ntc.edu/sites/default/files/styles/full_width_16_9/public/2021-06/marketing-social-media-header.jpg?itok=psCycQlf'),
+('14', 'SEO and SEA Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 17, 'Paris', '2024-5-01', '6 mois', 'Bac +2', 100, 4, 'https://cdnwp.mobidea.com/academy/wp-content/uploads/2018/04/best-seo-training-courses-760x428-1.png'),
+('15', 'Nurse Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 10, 'Paris', '2024-6-01', '5 mois', 'Bac', 100, 5, 'https://media.nurse.org/cache/a7/bd/a7bd613aae0566d01bdc76b9839cf82f.png'),
+('16', 'Formation Secourisme', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-3-01', '1 mois', 'Bac +2', 100, 5, 'https://media.licdn.com/dms/image/C4E12AQGmh3NQBzyEoA/article-cover_image-shrink_600_2000/0/1529953165957?e=2147483647&v=beta&t=egaIOhGNN9jt7AhMOTJqUuPFdVQb0aQNDJImsHDvq9I');
