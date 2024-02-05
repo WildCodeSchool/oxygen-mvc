@@ -6,7 +6,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
         perPage: 4,
         focus: 'center',
         autoplay: false,
-        arrows: false,
         breakpoints: {
             1200: {
                 perPage: 3,
