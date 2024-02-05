@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Model\DisciplineManager;
 use App\Model\StudentManager;
+use App\Model\FormationManager;
 
 class AdminController extends AbstractController
 {
@@ -24,11 +25,22 @@ class AdminController extends AbstractController
         // Total number of students
         $totalStudent = count($students);
 
+        // Initialize the formation manager
+        $formationManager = new FormationManager();
+
+        // Get all formations
+        $courses = $formationManager->selectAll();
+
+        // Total number of formations
+        $totalCourses = count($courses);
+
         return $this->twig->render('Admin/home/dashboard.html.twig', [
             'title' => 'Dashboard',
             'disciplines' => $disciplines,
             'students' => $students,
             'totalStudent' => $totalStudent,
+            'courses' => $courses,
+            'totalCourses' => $totalCourses,
         ]);
     }
     public function discipline(): string

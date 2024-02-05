@@ -130,7 +130,7 @@ nav ul li a {
 }
 
 .left-content h1 {
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -227,7 +227,7 @@ nav ul li a {
     color: var(--secondary);
 }
 
-/* Containers of Student and Formations */
+/* Containers of Student */
 
 .student-das {
     display: flex;
@@ -240,26 +240,15 @@ nav ul li a {
     display: flex;
     align-items: center;
     padding: 0 0 12px;
-    overflow-y: auto;
     cursor: grab;
 }
-
-
 
 .student-das h1 {
     font-size: clamp(1rem, 2vw, 2rem);
     margin-bottom: 24px;
 }
 
-/* .student-container {
-    column-gap: 20px;
-} */
-
 .std-das {
-    /* display: grid;
-    grid-auto-flow: dense;
-    align-items: center;
-    grid-template-rows: 8fr 2fr; */
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -271,7 +260,7 @@ nav ul li a {
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid rgba(169, 150, 253, 0.5);
-    width: 140px;
+    width: 100px;
     aspect-ratio: 1/1;
     margin-bottom: 4px;
     box-shadow: rgba(221, 221, 221, 0.3) 0px 6px 18px -3px,
@@ -280,7 +269,6 @@ nav ul li a {
 }
 
 .std-das .ava:hover {
-    transform: scale(1.05);
     border: 4px solid rgba(169, 150, 253, 0.6);
 }
 
@@ -290,4 +278,71 @@ nav ul li a {
     padding: 8px 0;
     font-weight: 500;
     text-align: center;
+}
+
+/* Containers of Course */
+
+.card-course {
+    max-width: 350px;
+    color: #fff;
+    background: rgba(188, 184, 198, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: inset 2px -2px 6px rgba(214, 214, 214, 0.2),
+        inset -3px 3px 3px rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    cursor: grab;
+}
+
+.course-container {
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+    /* flex-wrap: wrap; */
+    padding: 15px;
+}
+
+.course-container img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    /* grid-row: 1 / 5; */
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.course-container img:hover {
+    transform: scale(1.1);
+}
+
+.course-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.course-content h2 {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.course-info {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: auto;
+    line-height: 0;
+    opacity: 0.5;
+}
+
+.course-info:hover {
+    opacity: 1;
+}
+
+.course-info i {
+    margin-right: 8px;
 }

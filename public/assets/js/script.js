@@ -2,10 +2,11 @@ document.addEventListener( 'DOMContentLoaded', function() {
     // SETUP OPTION SLIDE SHOW
     const splide = new Splide( '.splide', {
         type   : 'loop',
-        pagination: true,
+        pagination: false,
         perPage: 4,
         focus: 'center',
-        autoplay: "play",
+        autoplay: false,
+        arrows: false,
         breakpoints: {
             1200: {
                 perPage: 3,
@@ -19,6 +20,26 @@ document.addEventListener( 'DOMContentLoaded', function() {
     });
     splide.mount();
 
+    // SETUP OPTION SECOND SLIDE
+
+    const splide2 = new Splide( '#course', {
+        type   : 'carousel',
+        pagination: false,
+        perPage: 5,
+        focus: 'center',
+        breakpoints: {
+            1200: {
+                perPage: 3,
+            },
+            767: {
+                perPage: 1,
+            },
+        },
+        gap: '1.5rem',
+        arrows: true,     
+    
+    });
+    splide2.mount();
 });
 
 // SETUP OPTION SLIDE SWIPER

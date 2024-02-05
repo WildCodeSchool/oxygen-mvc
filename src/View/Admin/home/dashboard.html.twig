@@ -35,12 +35,19 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                    <h1>All Formations: {{ totalCourses }}</h1>
+                    <div id="course" class="student-das splide">
+                        <div class="splide__track">
+                            <ul class="splide__list containers">
+                                {% for course in courses %}
+                                    <li class="splide__slide">
+                                        {% include 'components/admin/course-card.html.twig' with {'course': course} %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
             </div>
         </div>
     </section>
-{% endblock %}
-{% block javascript %}
-    {{ parent() }}
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 {% endblock %}
