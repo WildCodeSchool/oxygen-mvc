@@ -352,3 +352,71 @@ nav ul li a {
     padding: 30px 20px;
     color: #e5e5e5;
 }
+
+/* Applications go here */
+
+.applications .info-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.applications .info-top .notifications {
+    display: inline-block;
+	position: relative;
+}
+
+.applications .info-top .notifications::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    background: var(--secondary);
+    border: solid 1px #01081f;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50%;
+}
+
+/* Card of Applications */
+
+.applicant-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+}
+.applicant-line img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    flex-shrink: 0;
+    border: 2px solid rgba(159, 160, 168, 0.5);
+    box-shadow: rgba(221, 221, 221, 0.3) 0px 6px 18px -3px,
+        rgba(221, 221, 221, 0.2) 0px -3px 0px inset;
+}
+
+.applicant-info span {
+    font-size: 14px;
+    line-height: 16px;
+}
+.applicant-info p {
+    margin: 4px 0;
+    font-size: 12px;
+    line-height: 16px;
+    opacity: 0.5;
+}
+
+/* Card message */
+
+.message-subtext {
+    margin: 4px 0 0 0;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

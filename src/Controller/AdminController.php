@@ -34,6 +34,12 @@ class AdminController extends AbstractController
         // Total number of formations
         $totalCourses = count($courses);
 
+        // Get all applications
+        $applications = $studentManager->getApplications();
+
+        // Get all messages
+        $messages = $studentManager->getNewMessages();
+
         return $this->twig->render('Admin/home/dashboard.html.twig', [
             'title' => 'Dashboard',
             'disciplines' => $disciplines,
@@ -41,6 +47,8 @@ class AdminController extends AbstractController
             'totalStudent' => $totalStudent,
             'courses' => $courses,
             'totalCourses' => $totalCourses,
+            'applications' => $applications,
+            'messages' => $messages,
         ]);
     }
     public function discipline(): string

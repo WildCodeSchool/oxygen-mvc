@@ -199,3 +199,67 @@ INSERT INTO `Course` (`name` , `description` , `capacity` , `location`, `date`, 
 ('SEO and SEA Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 17, 'Paris', '2024-5-01', '6 mois', 'Bac +2', 100, 4, 'https://cdnwp.mobidea.com/academy/wp-content/uploads/2018/04/best-seo-training-courses-760x428-1.png'),
 ('Nurse Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 10, 'Paris', '2024-6-01', '5 mois', 'Bac', 100, 5, 'https://media.nurse.org/cache/a7/bd/a7bd613aae0566d01bdc76b9839cf82f.png'),
 ('Formation Secourisme', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-3-01', '1 mois', 'Bac +2', 100, 5, 'https://media.licdn.com/dms/image/C4E12AQGmh3NQBzyEoA/article-cover_image-shrink_600_2000/0/1529953165957?e=2147483647&v=beta&t=egaIOhGNN9jt7AhMOTJqUuPFdVQb0aQNDJImsHDvq9I');
+
+--
+-- Insert some new students
+--
+
+INSERT INTO `Student` (`firstName`, `lastName`, `email`, `tel`, `degree`, `birthday`, `address`, `avatar_image`) VALUES
+('Julia', 'Pellegrini', 'Pellegrini@gmail.com', 1234567890, 'PO Manager', '1995-01-01', 'Amsterdam', 'https://images.unsplash.com/photo-1551292831-023188e78222?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE0fHxwb3J0cmFpdHxlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60'),
+('Eric', 'Clampton', 'Eric@gmail.com', 1234567890, 'Junior Desinger', '1997-01-01', 'Mandrid', 'https://images.unsplash.com/photo-1562159278-1253a58da141?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fHBvcnRyYWl0JTIwbWFufGVufDB8MHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60'),
+('Jess', 'Flax', 'Flax@gmail.com', 1234567890, 'Bac+3 Nursering', '1999-01-01', 'Liverpool', 'https://images.unsplash.com/photo-1604004555489-723a93d6ce74?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80'),
+('Julia', 'Wilson', 'Julia@gmail.com', 1234567890, 'Dev Web', '1996-01-01', 'Lyon', 'https://images.unsplash.com/photo-1450297350677-623de575f31c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzV8fHdvbWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60'),
+('Jess', 'Watson', 'Jess@gmail.com', 1234567890, 'Data Scientist', '1989-01-01', 'Kiev', 'https://images.unsplash.com/photo-1596815064285-45ed8a9c0463?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1215&q=80'),
+('Hazard', 'Eden', 'eden@gmail.com', 1234567890, 'Social Marketing', '1997-01-01', 'Lille', 'https://cdn.discordapp.com/attachments/1186683768640122982/1187035817877708841/371521463_2619947881488781_2593667617711553075_n.jpg?ex=65cccb41&is=65ba5641&hm=56ba502d8bfbbd399fdba3d0851f8e4872c486b5637f5167343c3ca879eba5f5&'),
+('Ricky', 'James', 'James@gmail.com', 1234567890, 'Web Dev', '1998-01-01', 'Paris', 'https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2555&q=80');
+
+--
+-- Structure table Applications
+--
+
+CREATE TABLE `Applications` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `student_id` INT NOT NULL,
+  `course_id` INT NOT NULL,
+  `status` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`student_id`) REFERENCES `Student`(`id`),
+  FOREIGN KEY (`course_id`) REFERENCES `Course`(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Insert data to Applications
+--
+
+INSERT INTO `Applications` (`student_id`, `course_id`, `status`) VALUES
+(7, 2, 'pending'),
+(8, 7, 'pending'),
+(9, 13, 'pending'),
+(10, 7, 'pending'),
+(11, 10, 'pending'),
+(13, 4, 'pending');
+
+
+--
+-- Structure table New Messages
+--
+
+CREATE TABLE `New_Messages` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `student_id` INT NOT NULL,
+  `message` TEXT NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`student_id`) REFERENCES `Student`(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Insert data to table Messages
+--
+
+INSERT INTO `New_Messages` (`student_id`, `message`) VALUES
+(3, 'Bonjour, je suis intéressé par la formation Python Developer'),
+(5, 'Bonjour, je suis intéressé par la formation Designer'),
+(12, 'Bonjour, je suis intéressé par la formation Marketing Course'),
+(13, 'Bonjour, je suis intéressé par la formation Designer'),
+(10, 'Bonjour, je suis intéressé par la formation Data Scientist'),
+(7, 'Bonjour, je suis intéressé par la formation PHP Developer');

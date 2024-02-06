@@ -50,7 +50,30 @@
                 </div>
                 <div class="right-content">
                     <div class="applications">
-                        
+                        <div class="info-top">
+                            <h1>New Applicants</h1>
+                            <span class="notifications">
+                                <i class="fa-solid fa-bell"></i>
+                            </span>
+                        </div>
+                        <div class="applicants-container">
+                            {% for application in applications %}
+                                {% include 'components/admin/applicant-card.html.twig' with {'application': application} %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="applications">
+                        <div class="info-top">
+                            <h1>Messages</h1>
+                            <span class="notifications">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                        </div>
+                        <div class="messages-container">
+                            {% for message in messages %}
+                                {% include 'components/admin/message-card.html.twig' with {'message': message} %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
