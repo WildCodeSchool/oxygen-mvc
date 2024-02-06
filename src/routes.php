@@ -13,6 +13,7 @@ return [
     'discipline' => ['DisciplineController', 'index',],
     'discipline/show' => ['DisciplineController', 'show',['id']],
     'contact' => ['ContactController', 'index'],
+    'contact/message' => ['ContactController', 'message',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],

@@ -62,7 +62,22 @@ ALTER TABLE `item`
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+
+
+-- ------------------------------------------------------
 --
+--
+--Création d'une nouvelle base de données pour le projet Oxygen School
+--
+DROP DATABASE IF EXISTS `oxygen_school`;
+CREATE DATABASE IF NOT EXISTS `oxygen_school`;
+USE `oxygen_school`;
+
+-- ------------------------------------------------------
+--
+--Création de toutes les tables de la BDD oxygen_school
+--
+
 -- Structure de la table `Student`
 --
 
@@ -86,13 +101,13 @@ CREATE TABLE `Student` (
 CREATE TABLE `Course` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
-  `description` VARCHAR(150) NOT NULL,
-  `capacity` VARCHAR(150) NOT NULL,
+  `description` VARCHAR(5000) NOT NULL,
+  `capacity` INT NOT NULL,
   `location` VARCHAR(100),
   `date` DATE NOT NULL,
   `duration` VARCHAR(50),
   `degree` VARCHAR(100) NOT NULL,
-  `financing_supported` BOOLEAN,
+  `financing_supported` INT NOT NULL,
   `discipline_id` INT,
   `url_image` VARCHAR(255),
   PRIMARY KEY (`id`),
@@ -136,33 +151,50 @@ CREATE TABLE `contact` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- AUTO_INCREMENT pour les tables exportées
---
 
 --
+-- ------------------------------------------------------
 
---
 -- Contenu de la table `Discipline`
 --
 
-INSERT INTO `Discipline` (`icon`, `name`, `description`) VALUES
-('fa-laptop-code', 'Informatique', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
-('fa-pen-nib', 'Design', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
-('fa-money-bill-trend-up', 'Finance', 'Nos formations en finance vous permettront d’acquérir une culture économique et financière solide.'),
-('fa-chart-simple', 'Marketing', 'Trouvez votre formation marketing idéale parmi une large sélection de formations.'),
-('fa-notes-medical', 'Santé', 'Découvrez toutes nos formations destinées aux professionnels médicaux et paramédicaux.');
+INSERT INTO `Discipline` (`id`, `icon`, `name`, `description`) VALUES
+('1', 'fa-laptop-code', 'Informatique', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
+('2', 'fa-pen-nib', 'Design', 'Découvrez les métiers du design à travers nos formations et apprenez  les fondamentaux du design d’interface.'),
+('3', 'fa-money-bill-trend-up', 'Finance', 'Nos formations en finance vous permettront d’acquérir une culture économique et financière solide.'),
+('4', 'fa-chart-simple', 'Marketing', 'Trouvez votre formation marketing idéale parmi une large sélection de formations.'),
+('5', 'fa-notes-medical', 'Santé', 'Découvrez toutes nos formations destinées aux professionnels médicaux et paramédicaux.');
+--
+-- Contenu de la table `Course`
+--
+INSERT INTO `Course` (`id` , `name` , `description` , `capacity` , `location`, `date`, `duration` , `degree` , `financing_supported` , `discipline_id`, `url_image`) VALUES 
+('1', 'Web Designer', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 20, 'Paris', '2024-7-01', '5 mois', 'Bac +2', 100, 1, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('2', 'Python Developer', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-9-01', '3 mois', 'Bac +3', 100, 1, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('3', 'Data Analyst', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 15, 'Paris', '2024-4-01', '8 mois', 'Bac', 100, 1, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('4', 'PHP Developer', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 16, 'Paris', '2024-3-01', '3 mois', 'Bac +2', 100, 1, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('5', 'Web Designer', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 10, 'Paris', '2024-5-01', '5 mois', 'Bac +5', 100, 2, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('6', 'Designer', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-6-01', '3 mois', 'Bac +2', 100, 2, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('7', 'Figma Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 18, 'Paris', '2024-4-01', '12 mois', 'Bac +5', 100, 2, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('8', 'PhotoShop Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-9-01', '8 mois', 'Bac +2', 100, 2, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('9', 'Auditeur', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-6-01', '6 mois', 'Bac +2', 100, 3, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('10', 'Comptabilité', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 14, 'Paris', '2024-6-01', '3 mois', 'Bac', 100, 3, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('11', 'SAGE Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 16, 'Paris', '2024-8-01', '5 mois', 'Bac', 100, 3, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('12', 'Marketing Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-10-01', '12 mois', 'Bac +2', 100, 4, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('13', 'Webmarketing', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 15, 'Paris', '2024-6-01', '3 mois', 'Bac +5', 100, 4, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('14', 'SEO and SEA Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 17, 'Paris', '2024-5-01', '6 mois', 'Bac +2', 100, 4, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('15', 'Nurse Course', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 10, 'Paris', '2024-6-01', '5 mois', 'Bac', 100, 5, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg'),
+('16', 'Formation Secourisme', 'Le métier de développeur d application Python est au cœur de la transformation numérique. Cette formation va vous permettre de réaliser de la création, du développement et de l optimisation d applications en utilisant le langage Python.Un developpeur Python s occupe généralement du back-end des applications, c est a dire l architecture, contrairement aux développeurs front-end, qui gèrent l aspect visuel', 12, 'Paris', '2024-3-01', '1 mois', 'Bac +2', 100, 5, 'https://www.wildcodeschool.fr/wp-content/uploads/2017/09/IMG_20170920_155153-1.jpg');
 --
 -- Contenu de la table `Student`
 --
 
 INSERT INTO `Student` (`firstName`, `lastName`, `email`, `tel`, `degree`, `birthday`, `address`, `avatar_image`) VALUES
-('Asma', 'Jaballah', 'asma@gmail.com', 1234567890, 'PO Marketing', '1990-01-01', 'Paris', 'https://media.licdn.com/dms/image/D4E03AQGj9nhRHrjBzQ/profile-displayphoto-shrink_800_800/0/1684840480045?e=1712188800&v=beta&t=Y_dABFY94yxvlDfcQT7XR3X2_onGQlIdKh66PcS_v-c'),
-('Kevin', 'Girault', 'kevin@gmail.com', 1234567890, 'Junior Dev Web', '1986-01-01', 'Etrangers', 'https://media.licdn.com/dms/image/D5603AQFzhJJ8v2K2QQ/profile-displayphoto-shrink_800_800/0/1685949560183?e=1711584000&v=beta&t=PLV-fVRuPbBUAdYOBGV1M3TFo-ao0k0nAEW-6jfBrOk'),
-('Joël', 'Mayemba', 'joel@gmail.com', 1234567890, 'Bac+3 ReactJs', '1995-01-01', 'Paris', 'https://media.licdn.com/dms/image/D4E03AQF_1iyiRToEHQ/profile-displayphoto-shrink_800_800/0/1701904115437?e=1711584000&v=beta&t=z3HTNjBHIO5npMAXU5A5VhmRBrHwu499FrSaqgjnkoY'),
-('Lucas', 'Boillot', 'lucas@gmail.com', 1234567890, 'Angular Professor', '1990-01-01', 'Paris', 'https://avatars.githubusercontent.com/u/25879136?v=4'),
-('Quentin', 'Guillemineau', 'Quentin@gmail.com', 1234567890, 'Data Engineer', '1990-01-01', 'Paris', 'https://i.postimg.cc/66b3Cffp/Quentin.png'),
-('Yazid', 'Sefsaf', 'Yazid@gmail.com', 1234567890, 'Big Data Junior', '1990-01-01', 'Paris', 'https://cdn.discordapp.com/attachments/1186683768640122982/1187052343859089549/ayzd.jpg?ex=65c3a025&is=65b12b25&hm=4fc40165ef44b2f148d9f1be816925f478fa227452980b207de6b157007b3af8&');
+('Asma', 'Jaballah', 'asma@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'asma.jpg'),
+('Kevin', 'Girault', 'kevin@gmail.com', 1234567890, 'Master', '1986-01-01', 'Etrangers', 'https://media.licdn.com/dms/image/D5603AQFzhJJ8v2K2QQ/profile-displayphoto-shrink_800_800/0/1685949560183?e=1711584000&v=beta&t=PLV-fVRuPbBUAdYOBGV1M3TFo-ao0k0nAEW-6jfBrOk'),
+('Joël', 'Mayemba', 'joel@gmail.com', 1234567890, 'Master', '1995-01-01', 'Paris', 'https://media.licdn.com/dms/image/D4E03AQF_1iyiRToEHQ/profile-displayphoto-shrink_800_800/0/1701904115437?e=1711584000&v=beta&t=z3HTNjBHIO5npMAXU5A5VhmRBrHwu499FrSaqgjnkoY'),
+('Lucas', 'Boillot', 'lucas@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://avatars.githubusercontent.com/u/25879136?v=4'),
+('Quentin', 'Guillemineau', 'Quentin@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://i.postimg.cc/66b3Cffp/Quentin.png'),
+('Yazid', 'Sefsaf', 'Yazid@gmail.com', 1234567890, 'Master', '1990-01-01', 'Paris', 'https://cdn.discordapp.com/attachments/1186683768640122982/1187052343859089549/ayzd.jpg?ex=65c3a025&is=65b12b25&hm=4fc40165ef44b2f148d9f1be816925f478fa227452980b207de6b157007b3af8&');
 
 --
 -- Contenu de la table `Les_eleves_d_Oxygen_School_temoignent`
@@ -175,3 +207,5 @@ INSERT INTO `Student_Reviews` (`student_id`, `testimonial`) VALUES
 (4, 'Je n’ai jamais porté une grande importance aux diplômes, mais plutôt à mes compétences, à ce que je suis capable de faire concrètement. Je cherchais à allier la partie technique et le côté relationnel et fonctionnel dans la suite de ma carrière'),
 (5, 'C’était très intense, j’ai eu une promotion en or et beaucoup d’entraide et ça ça a été très important.'),
 (6, 'Peu importe ce que l’on a fait avant, c’est toujours une force, et non une faiblesse.');
+
+
