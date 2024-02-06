@@ -33,6 +33,7 @@
 }
 
 .logo {
+    margin-top: 15px;
     order: 1;
     font-size: 2.3rem;
     display: flex;
@@ -52,7 +53,7 @@
 }
 
 .navbar a {
-    color: black;
+    color: var(--gray);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
