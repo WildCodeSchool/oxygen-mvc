@@ -1,11 +1,6 @@
-* {
-    font-family: var(--font-family);
-}
-
 :root {
     --primary-color: #f7f7f7;
-    --principal-color: #23A6F0;
-    --font-family: 'Roboto', sans-serif;
+    --principal-color: rgba(67, 159, 212, 0.11);
     --font-size: 1.4rem;
     --link-color: #ffffff;
     --black-color: #000000;
@@ -14,7 +9,6 @@
     --border-radius: 5px;
     --font-bolder: 700;
     --gray-color: rgb(104, 104, 104);
-    --font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -27,6 +21,10 @@
     gap: 1.8rem;
 }
 
+.formation-description {
+    margin: 3rem auto;
+}
+
 .formation-description-text {
     width: 70%;
     background-color: var(--principal-color);
@@ -34,26 +32,36 @@
     border-radius: 0.8rem;
     margin: 0 auto;
     font-family: var(--font-family);
+    transition: width 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-.formation-description-text h2 {
-    color: white;
+.formation-description-text:hover {
+    box-shadow: 3px 5px 5px 0px rgb(189, 188, 188);
+    width: 73%;
+}
+
+.formation-description-text h1 {
+    display: flex;
+    place-content: center;
+    color: blue;
     text-shadow: 1px 1px 2px rgba(71, 71, 71, 0.5);
-    ;
+    margin: 0 auto;
+    font-size: 2rem;
 }
 
 .formation-description-text article {
-    font-size: 1.5rem;
-    color: white;
+    font-size: 1rem;
+    color: black;
     background-color: var(--principal-color);
     padding: 1.2rem;
     border: 3px white solid;
     border-radius: 0.8rem;
+    line-height: 1.2rem;
 }
 
 .formation-infos-description {
     text-shadow: 1px 1px 2px rgba(128, 128, 128, 0.5);
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -62,17 +70,23 @@
     background-color: var(--principal-color);
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1.2rem;
     border-radius: 15px;
     font-family: var(--font-family);
-    color: var(--white-color);
+    color: var(--black-color);
+    transition: width 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.formation-infos-description:hover {
+    box-shadow: 3px 5px 5px 0px rgb(191, 189, 189);
+    width: 73%;
 }
 
 .formation-infos-description i {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-right: 1.3rem;
-    color: var(--white-color);
+    color: black;
     padding: 0.3rem;
     border: 2px solid var(--white-color);
     border-radius: 50%;
@@ -117,13 +131,21 @@ form input[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--principal-color);
-    width: 130px;
+    background-color: #67c6fd;
+    width: 140px;
     padding: 10px;
     border-radius: 10px;
     color: var(--white-color);
     font-weight: var(--font-weight);
     margin: 0 auto;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, padding 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #57bffb;
+    box-shadow: 3px 5px 5px 0px rgb(189, 188, 188);
+    cursor: pointer;
+    padding: 11px;
 }
 
 form fieldset textarea {
@@ -149,7 +171,7 @@ form fieldset textarea:focus {
 /* css fomulaire */
 
 
-/* css responsive */
+/* --RESPONSIVE FOR 768PX  */
 
 @media screen and (max-width: 768px) {
     .grid {
@@ -169,7 +191,122 @@ form fieldset textarea:focus {
         align-items: center;
     }
     .formation-description-text article {
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .formation-infos-description div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .formation-infos-description div i {
+        font-size: 1.8rem;
+        margin: 0 auto;
+    }
+    form fieldset {
+        padding: 1rem;
+        border: 2px solid #23A6F0;
+    }
+    form fieldset textarea {
+        border: none;
+        resize: none;
+        width: 100%;
+    }
+    form fieldset textarea:focus {
+        outline: none;
+        text-align: left;
+        border: none;
+        font-size: 1rem;
+    }
+}
+
+
+/*RESPONSIVE FOR 950 PX*/
+
+@media screen and (max-width: 950px) {
+    .grid {
+        gap: 1rem;
+    }
+    .formation-description-text {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .formation-description-text h1 {
+        display: flex;
+        place-content: center;
+        color: blue;
+        text-shadow: 1px 1px 2px rgba(71, 71, 71, 0.5);
+        margin: 0 auto;
+        font-size: 1.5rem;
+    }
+    .formation-infos-description {
+        display: grid;
+        font-size: 1rem;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 0.3rem;
+        justify-items: center;
+        /* Horizontally center the grid items */
+        align-items: center;
+    }
+    .formation-description-text {
+        width: 70%;
+    }
+    .formation-description-text article {
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .formation-infos-description div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .formation-infos-description div i {
+        font-size: 1.8rem;
+        margin: 0 auto;
+    }
+    form fieldset {
+        padding: 1rem;
+        border: 2px solid #23A6F0;
+    }
+    form fieldset textarea {
+        border: none;
+        resize: none;
+        width: 100%;
+    }
+    form fieldset textarea:focus {
+        outline: none;
+        text-align: left;
+        border: none;
+        font-size: 1rem;
+    }
+}
+
+
+/*--RESPONSIVE FOR 1200PX  */
+
+@media screen and (max-width: 1200px) {
+    .grid {
+        gap: 1rem;
+    }
+    .formation-description-text {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .formation-infos-description {
+        display: grid;
         font-size: 1.3rem;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 0.3rem;
+        justify-items: center;
+        /* Horizontally center the grid items */
+        align-items: center;
+    }
+    .formation-description-text article {
+        font-size: 1rem;
         text-align: justify;
     }
     .formation-infos-description div {

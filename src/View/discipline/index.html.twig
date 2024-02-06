@@ -2,11 +2,13 @@
     {% block stylesheet %}
     {{ parent() }}
     <link rel="stylesheet" href="/assets/css/discipline.css">
+    <link rel="stylesheet" href="/assets/css/home/hero.css">
     {% endblock %}
 
 {% block title %}Page discipline{% endblock %}
 {% block content %}
  <!-- debut de formation main  -->
+ {% include 'components/home/hero.html.twig' %}
     <main class="main">
         <section class="section grid">
             <h1 class="formation-title">Nos formations</h1>

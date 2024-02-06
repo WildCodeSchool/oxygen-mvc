@@ -1,9 +1,12 @@
 {% extends 'layout.html.twig' %}
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/formation.css">
-    {{parent()}}
+{% block stylesheet %}
+{{parent()}}
+<link rel="stylesheet" href="/assets/css/home/hero.css">
+<link rel="stylesheet" href="/assets/css/formation.css">
 {% endblock %}
 
 {% block content %}
+ {% include 'components/home/hero.html.twig' %}
     <main>
         <!-- debut de section formation description  -->
         <section class="formation-description grid">
