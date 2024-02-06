@@ -40,17 +40,17 @@ class StudentManager extends AbstractManager
     /**
      * Get the 5 new_message with associated student
      */
-        public function getNewMessages(): array
-        {
-            $query = 'SELECT n.*, s.firstName, s.lastName, s.avatar_image
+    public function getNewMessages(): array
+    {
+        $query = 'SELECT n.*, s.firstName, s.lastName, s.avatar_image
                       FROM new_messages n
                       JOIN student s ON n.student_id = s.id
                       ORDER BY id DESC
                       LIMIT 5;';
 
-            $statement = $this->pdo->query($query);
-            $messages = $statement->fetchAll(\PDO::FETCH_ASSOC);
+        $statement = $this->pdo->query($query);
+        $messages = $statement->fetchAll(\PDO::FETCH_ASSOC);
 
-            return $messages;
-        }
+        return $messages;
     }
+}
