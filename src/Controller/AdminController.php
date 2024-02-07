@@ -59,8 +59,41 @@ class AdminController extends AbstractController
     }
     public function formation(): string
     {
+
+        // Initialize the formation manager
+        $formationManager = new FormationManager();
+
+        // Get all formations
+        $courses = $formationManager->selectAll();
+
+        // Total number of formations
+        $totalCourses = count($courses);
+
+        // Initialize the discipline manager
+        $disciplineManager = new DisciplineManager();
+
+        // Get all disciplines
+        $disciplines = $disciplineManager->selectAll();
+
+        // Initialize $filteredCourses to all courses initially
+        $filteredCourses = $courses;
+
+        // Check if a discipline filter is applied
+        $disciplineId = isset($_GET['discipline_id']) ? intval($_GET['discipline_id']) : null;
+
+        if ($disciplineId !== null) {
+            $filteredCourses = $formationManager->selectAllByDiscipline($disciplineId);
+        }
+
+        // Total number of formations
+        $totalCourses = count($filteredCourses);
+
         return $this->twig->render('Admin/formation/formation.html.twig', [
             'title' => 'Formation',
+            'courses' => $filteredCourses,
+            'totalCourses' => $totalCourses,
+            'disciplines' => $disciplines,
+            'disciplineId' => $disciplineId,
         ]);
     }
     public function student(): string
