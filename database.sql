@@ -141,7 +141,7 @@ CREATE TABLE `contact` (
 -- AUTO_INCREMENT pour les tables exportées
 --
 
---
+-- Contenu de la table `contact`
 
 --
 -- Contenu de la table `Discipline`
