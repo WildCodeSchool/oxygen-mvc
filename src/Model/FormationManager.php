@@ -23,5 +23,4 @@ class FormationManager extends AbstractManager
 
         return $statement = $statement->fetchAll();
     }
-
 }
