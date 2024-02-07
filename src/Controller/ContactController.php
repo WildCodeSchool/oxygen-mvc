@@ -11,28 +11,28 @@ class ContactController extends AbstractController
      */
     public function index(): ?string
     {
-        $errors=[];
+        $errors = [];
         $form = [];
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                foreach ($_POST as $key => $value) {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            foreach ($_POST as $key => $value) {
                 $form[$key] = trim(htmlentities($value));
-                }
+            }
 
             $errors = $this->validationForm();
 
-                if (empty($errors)) {
+            if (empty($errors)) {
                 $contactManager = new ContactManager();
                 $contactManager->insert($form);
                 header('Location: /contact/message');
                 exit();
-                }
             }
+        }
         return $this->twig->render('Contact/contact.html.twig', [
         'errors' => $errors,
         'post' => $form,
         ]);
     }
-    
+
 // la méthode message() affiche un message de confirmation en cas de succes.
     public function message(): ?string
     {
