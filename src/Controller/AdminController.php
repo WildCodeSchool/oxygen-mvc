@@ -95,7 +95,6 @@ class AdminController extends AbstractController
             'disciplines' => $disciplines,
             'disciplineId' => $disciplineId,
         ]);
-
     }
     public function student(): string
     {
