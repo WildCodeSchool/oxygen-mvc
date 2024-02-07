@@ -38,6 +38,7 @@ class StudentManager extends AbstractManager
         $statement->bindValue(':formation', $student['formation'], PDO::PARAM_STR);
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
+    }
 
 
     /**
@@ -51,7 +52,7 @@ class StudentManager extends AbstractManager
                   JOIN course c ON a.course_id = c.id';
 
         $statement = $this->pdo->query($query);
-        $applications = $statement->fetchAll(\PDO::FETCH_ASSOC);
+        $applications = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         return $applications;
     }
@@ -68,9 +69,8 @@ class StudentManager extends AbstractManager
                       LIMIT 5;';
 
         $statement = $this->pdo->query($query);
-        $messages = $statement->fetchAll(\PDO::FETCH_ASSOC);
+        $messages = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         return $messages;
-
     }
 }
