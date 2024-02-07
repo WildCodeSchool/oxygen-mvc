@@ -7,7 +7,6 @@ use App\Model\StudentManager;
 use App\Model\FormationManager;
 use App\Model\ContactManager;
 
-
 class AdminController extends AbstractController
 {
     public function index(): string
@@ -52,8 +51,8 @@ class AdminController extends AbstractController
     public function contact(): string
     {
 
-        $ContactManager = new ContactManager();
-        $contact = $ContactManager;
+        $contactManager = new ContactManager();
+        $contact = $contactManager;
         $contact->selectAll();
 
 
@@ -118,5 +117,4 @@ class AdminController extends AbstractController
             'title' => 'Message',
         ]);
     }
-   
 }
