@@ -20,43 +20,6 @@ SET time_zone = "+00:00";
 -- Base de données :  `simple-mvc`
 --
 -- --------------------------------------------------------
---
--- Structure de la table `item`
---
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = latin1;
---
--- Contenu de la table `item`
---
-INSERT INTO `item` (`id`, `title`)
-VALUES (1, 'Stuff'),
-  (2, 'Doodads');
---
--- Index pour les tables exportées
---
---
--- Index pour la table `item`
---
-ALTER TABLE `item`
-ADD PRIMARY KEY (`id`);
---
--- AUTO_INCREMENT pour les tables exportées
---
---
--- AUTO_INCREMENT pour la table `item`
---
-ALTER TABLE `item`
-MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  AUTO_INCREMENT = 3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
-;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */
-;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
-;
---
 -- Structure de la table `Student`
 --
 CREATE TABLE `Student` (
@@ -173,7 +136,8 @@ VALUES (
     'sophielaffite@gmail.com',
     '0740123068',
     'Bonjour Comment puis-je s inscrire à la formation PHP Developer'
-  ) (
+  ),
+  (
     'Till',
     'Benoisis',
     'tillbenoisis@live.com',
@@ -186,7 +150,8 @@ VALUES (
     'salim.muir@yahou.fr',
     '0632124879',
     'Bonjour la date de la prochaine session pour la formation PHP Developer'
-  ) (
+  ),
+  (
     'Eric',
     'Leclerc',
     'eric.leclerc@gmai.com',
