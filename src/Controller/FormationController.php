@@ -16,4 +16,14 @@ class FormationController extends AbstractController
             'formation' => $formations
         ]);
     }
+    //fonction pour supprimer une formation
+    public function delete(): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $id = trim($_POST['id']);
+            $formationManager = new FormationManager();
+            $formationManager->delete((int) $id);
+            header('Location:/admin/formation');
+        }
+    }
 }
