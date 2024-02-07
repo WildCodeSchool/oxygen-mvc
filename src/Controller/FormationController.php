@@ -27,6 +27,7 @@ class FormationController extends AbstractController
         }
     }
 
+
     $success = $_SESSION['success'] ?? null;
     unset($_SESSION['success']);
 
@@ -63,4 +64,15 @@ private function validateStudent($student)
 
     return $errors;
 }
+    //fonction pour supprimer une formation
+    public function delete(): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $id = trim($_POST['id']);
+            $formationManager = new FormationManager();
+            $formationManager->delete((int) $id);
+            header('Location:/admin/formation');
+        }
+    }
+
 }
