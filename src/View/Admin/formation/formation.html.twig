@@ -53,7 +53,10 @@
                                     <td>{{ course.duration }}</td>
                                     <td class="action">
                                         <button class="btn-edit">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+                                         <form action="/admin/formation/delete" method="post">
+                                        <input type="hidden" name="id" value="{{ course.id }}">
                                         <button class="btn-delete"><i class="fa-solid fa-trash-can"></i></i></button>
+                                    </form>
                                     </td>
                                 </tr>
                             {% endfor %}
