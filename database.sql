@@ -76,6 +76,7 @@ CREATE TABLE `Student` (
   `birthday` DATE,
   `address` TEXT NOT NULL,
   `avatar_image` VARCHAR(255),
+  `formation` VARCHAR(255),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

@@ -168,12 +168,12 @@ form fieldset textarea:focus {
 }
 
 
-/* css fomulaire */
+/* css fomulaire finish */
 
 
-/* --RESPONSIVE FOR 768PX  */
+/* --RESPONSIVE FOR 350PX  AND 768PX */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 350px) and (max-width: 550px) {
     .grid {
         gap: 1rem;
     }
@@ -183,7 +183,7 @@ form fieldset textarea:focus {
     }
     .formation-infos-description {
         display: grid;
-        font-size: 1rem;
+        font-size: 0.8rem;
         grid-template-columns: repeat(2, 2fr);
         gap: 0.3rem;
         justify-items: center;
@@ -191,22 +191,24 @@ form fieldset textarea:focus {
         align-items: center;
     }
     .formation-description-text article {
-        font-size: 1rem;
+        font-size: 0.5rem;
         text-align: justify;
     }
     .formation-infos-description div {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 0.6rem;
         justify-content: center;
-        gap: 0.8rem;
+        gap: 0.7rem;
+        display: none;
     }
     .formation-infos-description div i {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         margin: 0 auto;
     }
     form fieldset {
-        padding: 1rem;
+        padding: 0.4rem;
         border: 2px solid #23A6F0;
     }
     form fieldset textarea {
@@ -218,7 +220,61 @@ form fieldset textarea:focus {
         outline: none;
         text-align: left;
         border: none;
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* --RESPONSIVE FOR 768PX  */
+
+@media screen and (min-width: 550px) and (max-width: 768px) {
+    .grid {
+        gap: 1rem;
+    }
+    .formation-description-text {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .formation-infos-description {
+        display: grid;
+        font-size: 0.8rem;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 0.3rem;
+        justify-items: center;
+        /* Horizontally center the grid items */
+        align-items: center;
+    }
+    .formation-description-text article {
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+    .formation-infos-description div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+        justify-content: center;
+        gap: 0.7rem;
+        display: none;
+    }
+    .formation-infos-description div i {
+        font-size: 1.3rem;
+        margin: 0 auto;
+    }
+    form fieldset {
+        padding: 0.4rem;
+        border: 2px solid #23A6F0;
+    }
+    form fieldset textarea {
+        border: none;
+        resize: none;
+        width: 100%;
+    }
+    form fieldset textarea:focus {
+        outline: none;
+        text-align: left;
+        border: none;
+        font-size: 0.8rem;
     }
 }
 
