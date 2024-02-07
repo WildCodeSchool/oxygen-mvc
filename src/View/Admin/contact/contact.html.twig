@@ -1,0 +1,46 @@
+{% extends 'layout.html.twig' %}
+    {% block title %} Oxygen: Admin{% endblock %}
+    {% block stylesheet %}
+        {{ parent() }}
+        <link rel="stylesheet" href="/assets/css/admin/main-admin.css">
+        <link rel="stylesheet" href="/assets/css/admin/course.css">
+        <link rel="stylesheet" href="/assets/css/admin/table.css">
+    {% endblock %}
+{% block content %}
+    <section class="main-admin">
+        <div class="main-das">
+            {% include 'components/admin/nav-das.html.twig' %}
+            <div class="course-container">
+                <div class="course-header">
+                    <h1>Les messages de la page Contact</h1>
+                </div>
+                <div class="course-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Prénom</th>
+                                <th>Nom</th>
+                                <th>Email</th>
+                                <th>Téléphone</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for contact in contact %}
+                                <tr>
+                                    <td>{{ contact.id }}</td>
+                                    <td>{{ contact.firstName }}</td>
+                                    <td>{{ contact.lastName }}</td>
+                                    <td>{{ contact.email }}</td>
+                                    <td>{{ contact.phone }}</td>
+                                    <td>{{ contact.message }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

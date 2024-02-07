@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Model\DisciplineManager;
 use App\Model\StudentManager;
 use App\Model\FormationManager;
+use App\Model\ContactManager;
+
 
 class AdminController extends AbstractController
 {
@@ -37,9 +39,6 @@ class AdminController extends AbstractController
         // Get all applications
         $applications = $studentManager->getApplications();
 
-        // Get all messages
-        $messages = $studentManager->getNewMessages();
-
         return $this->twig->render('Admin/home/dashboard.html.twig', [
             'title' => 'Dashboard',
             'disciplines' => $disciplines,
@@ -48,7 +47,18 @@ class AdminController extends AbstractController
             'courses' => $courses,
             'totalCourses' => $totalCourses,
             'applications' => $applications,
-            'messages' => $messages,
+        ]);
+    }
+    public function contact(): string
+    {
+
+        $ContactManager = new ContactManager();
+        $contact = $ContactManager;
+        $contact->selectAll();
+
+
+        return $this->twig->render('admin/contact/contact.html.twig', [
+            'contact' => $contact,
         ]);
     }
     public function discipline(): string
@@ -108,4 +118,5 @@ class AdminController extends AbstractController
             'title' => 'Message',
         ]);
     }
+   
 }

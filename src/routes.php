@@ -17,6 +17,6 @@ return [
     'admin/formation' => ['AdminController', 'formation'],
     'admin/formation/delete' => ['FormationController', 'delete'],
     'admin/student' => ['AdminController', 'student'],
-    'admin/message' => ['AdminController', 'message'],
+    'admin/contact' => ['AdminController', 'contact'],
 
 ];
