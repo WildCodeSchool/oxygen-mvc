@@ -9,4 +9,17 @@ class FormationManager extends AbstractManager
     {
         parent::__construct();
     }
+
+    // Get all courses with discipline name
+    public function selectAllByDiscipline(int $id): array
+    {
+        $query = 'SELECT c.*, d.name AS discipline_name
+                  FROM ' . self::TABLE . ' c
+                  JOIN discipline d ON c.discipline_id = d.id
+                  WHERE c.discipline_id = :id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute(['id' => $id]);
+
+        return $statement = $statement->fetchAll();
+    }
 }
