@@ -2,10 +2,11 @@
 
 namespace App\Model;
 
+use PDO;
+
 class FormationManager extends AbstractManager
 {
     public const TABLE = 'Course';
-
     public function __construct()
     {
         parent::__construct();
@@ -104,5 +105,14 @@ class FormationManager extends AbstractManager
         $statement->bindValue(':url_image', $course['url_image'] ?? null, \PDO::PARAM_STR);
 
         $statement->execute();
+    }
+    public function selectOneByDisciplineId(int $id): array|false
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE discipline_id=:id");
+        $statement->bindValue('id', $id, PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetchAll();
     }
 }
