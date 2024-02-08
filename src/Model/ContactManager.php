@@ -8,6 +8,10 @@ class ContactManager extends AbstractManager
 {
     public const TABLE = 'contact';
 
+    public function __construct()
+    {
+        parent::__construct();
+    }
     /**
      * Insert new item in database
      */
