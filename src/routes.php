@@ -12,6 +12,7 @@ return [
     'discipline' => ['DisciplineController', 'index',],
     'discipline/show' => ['DisciplineController', 'show',['id']],
     'contact' => ['ContactController', 'index'],
+    'contact/message' => ['ContactController', 'message',],
     'admin' => ['AdminController', 'index'],
     'admin/discipline' => ['AdminController', 'discipline'],
     'admin/formation' => ['AdminController', 'formation'],
