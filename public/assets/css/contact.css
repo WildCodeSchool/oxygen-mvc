@@ -192,28 +192,6 @@ form fieldset textarea:focus {
 }
 
 
-
-/*.input_form {
-border: 2px solid rgb(173, 218, 247);
-width: 100%;
-padding-left: 1rem;
-padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
-border-radius: 4px;
-}
-.label {
-    font-size: 20px;
-    font-style: italic;
-    font-family: var(--principalFontFamily);
-    color: rgb(33, 17, 97);
-    font-display: center;
-    padding-top: 1rem;
-    margin-top: 2rem;
-    padding-right: 3rem;
-
-}*/
-
 ::placeholder {
     color: rgb(171, 171, 220);
     font-size: 1rem;
