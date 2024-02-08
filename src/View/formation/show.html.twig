@@ -25,14 +25,14 @@
                 <div><i class="ri-map-pin-line"></i>" {{formation.location}}"</div>
                 <div><i class="ri-calendar-2-line"></i>" {{formation.date}}"</div>
                 <div><i class="ri-graduation-cap-line"></i>" {{formation.degree}}"</div>
-                <div><i class="ri-money-euro-circle-line"></i>" {{formation.financing_supported}}"</div>
+                <div><i class="ri-money-euro-circle-line"></i>" {{formation.financing_supported}}%"</div>
             </div>
             <!-- fin de formation description infos -->
-
+                     <div class="alert-success">{{success}} </div>
             <!-- debut de formation description form -->
             <div class="form">
                 <h2>Inscrivez </h2>
-                <form action="#" method="post" novalidate="novalidate">
+                <form action="#" method="post">
                     <!--PRENOM-->
                     <fieldset>
                         <legend>Prenom</legend>
@@ -67,7 +67,7 @@
                         <div class="alert-error">{{ errors.niveau }}</div>
                     <input type="submit" value="S'inscrire">
                 </form>
-               {{success}}
+               
             </div>
             <pre>
                 
