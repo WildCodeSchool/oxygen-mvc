@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Model;
-
+use PDO;
 class FormationManager extends AbstractManager
 {
     public const TABLE = 'Course';
@@ -21,5 +21,14 @@ class FormationManager extends AbstractManager
         $statement->execute(['id' => $id]);
 
         return $statement = $statement->fetchAll();
+    }
+    public function selectOneById(int $id): array|false
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE discipline_id=:id");
+        $statement->bindValue('id', $id, PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetchAll();
     }
 }

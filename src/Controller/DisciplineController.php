@@ -11,9 +11,9 @@ class DisciplineController extends AbstractController
      */
     public function index(): string
     {
-
+        $id= $_GET['id'];
         $coursesMananager = new FormationManager();
-        $courses = $coursesMananager->selectAll();
+        $courses = $coursesMananager->selectOneById( $id);
 
         return $this->twig->render('discipline/index.html.twig', [
             'courses' => $courses,

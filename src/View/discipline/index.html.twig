@@ -12,7 +12,7 @@
     <main class="main">
         <section class="section grid">
             <h1 class="formation-title">Nos formations</h1>
-
+ {{ app.request.query.get('id') }}
         {% for course in courses %}
              <div class="formation-components">
                 <!--debut de formation text qui contient title description et bouton  -->
@@ -27,7 +27,7 @@
                         <li><i class="ri-map-pin-line"></i>{{ course.location}}</li>
                         <li><i class="ri-calendar-2-line"></i>{{ course.date}}</li>
                         <li><i class="ri-graduation-cap-line"></i>{{ course.degree}}</li>
-                        <li><i class="ri-money-euro-circle-line"></i>{{ course.financing_supported}}prise en charge</li>
+                        <li><i class="ri-money-euro-circle-line"></i>{{ course.financing_supported}} % Financée</li>
                     </ul>
                 </div>
             </div>
