@@ -1,4 +1,4 @@
-<div id="modal-course" class="modal">
+<div id="add-course" class="modal">
     <div class="modal-content">
         <h2>Create a new course</h2>
         <a class="close" href="#">&times;</a>
@@ -67,7 +67,7 @@
                 <div class="input__box">
                     <span id="courseImg" class="details">Image</span>
                     <img id="preview-image" src="https://placehold.jp/100x100.png" alt="">
-                    <input type="text" id="image-url-input" name="image-url" placeholder="Insert Image URL" oninput="updateImage(this.value)" required>
+                    <input type="text" id="image-url-input" name="image-url" placeholder="Insert Image URL" oninput="updateImage(this.value, 'add-course')" required>
                 </div>
                 <div class="input__box">
                     <span class="details">Description</span>
@@ -79,8 +79,8 @@
     </div>
 </div>
 <script>
-    function updateImage(url) {
-        var imgElement = document.getElementById('preview-image');
+    function updateImage(url, modalId) {
+        var imgElement = document.querySelector('#' + modalId + ' #preview-image');
         if (url.trim() === '') {
             imgElement.src = 'https://placehold.jp/100x100.png';
         } else {

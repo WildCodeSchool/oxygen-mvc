@@ -91,17 +91,17 @@ class FormationManager extends AbstractManager
                 id = :id
         ");
 
-        $statement->bindValue('id', $course['id'], \PDO::PARAM_INT);
-        $statement->bindValue('name', $course['name'], \PDO::PARAM_STR);
-        $statement->bindValue('description', $course['description'] ?? null, \PDO::PARAM_STR);
-        $statement->bindValue('capacity', $course['capacity'] ?? null, \PDO::PARAM_STR);
-        $statement->bindValue('location', $course['location'] ?? null, \PDO::PARAM_STR);
-        $statement->bindValue('date', $course['date'] ?? null, \PDO::PARAM_STR);
-        $statement->bindValue('duration', $course['duration'] ?? null, \PDO::PARAM_STR);
-        $statement->bindValue('degree', $course['degree'] ?? null, \PDO::PARAM_STR);
-        $statement->bindValue('financing_supported', isset($course['support']) ? true : false, \PDO::PARAM_BOOL);
-        $statement->bindValue('discipline_id', $course['discipline_id'] ?? null, \PDO::PARAM_INT);
-        $statement->bindValue('url_image', $course['url_image'] ?? null, \PDO::PARAM_STR);
+        $statement->bindValue(':id', $course['id'], \PDO::PARAM_INT);
+        $statement->bindValue(':name', $course['name'], \PDO::PARAM_STR);
+        $statement->bindValue(':description', $course['description'] ?? null, \PDO::PARAM_STR);
+        $statement->bindValue(':capacity', $course['capacity'] ?? null, \PDO::PARAM_STR);
+        $statement->bindValue(':location', $course['location'] ?? null, \PDO::PARAM_STR);
+        $statement->bindValue(':date', $course['date'] ?? null, \PDO::PARAM_STR);
+        $statement->bindValue(':duration', $course['duration'] ?? null, \PDO::PARAM_STR);
+        $statement->bindValue(':degree', $course['degree'] ?? null, \PDO::PARAM_STR);
+        $statement->bindValue(':financing_supported', isset($course['support']) ? true : false, \PDO::PARAM_BOOL);
+        $statement->bindValue(':discipline_id', $course['discipline_id'] ?? null, \PDO::PARAM_INT);
+        $statement->bindValue(':url_image', $course['url_image'] ?? null, \PDO::PARAM_STR);
 
         $statement->execute();
     }

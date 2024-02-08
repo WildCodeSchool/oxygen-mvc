@@ -88,6 +88,7 @@ class AdminController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Clean $_POST data
             $courseData = [
+                'id' => isset($_POST['course-id']) ? intval($_POST['course-id']) : null,
                 'name' => $_POST['name-course'],
                 'description' => $_POST['courseDes'],
                 'capacity' => $_POST['capacity'],
@@ -100,8 +101,14 @@ class AdminController extends AbstractController
                 'url_image' => $_POST['image-url'],
             ];
 
-            // Insert course data into the database
-            $formationManager->insert($courseData);
+             // Check if it's an edit operation
+            if (isset($_POST['course-id'])) {
+                // Edit existing course
+                $formationManager->update($courseData);
+            } else {
+                // Insert new course data into the database
+                $formationManager->insert($courseData);
+            }
 
             // Redirect to prevent form resubmission
             header('Location: /admin/formation');

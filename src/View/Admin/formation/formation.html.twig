@@ -28,9 +28,9 @@
                     </form>
                 </div>
                 <div class="add-course">
-                    <a class="btn-add" href="#modal-course"><i class="fa-solid fa-circle-plus"></i></i>Create</a>
+                    <a class="btn-add" href="#add-course"><i class="fa-solid fa-circle-plus"></i></i>Create</a>
                 </div>
-                {% include 'components/admin/modal-course.html.twig' %}
+                {% include 'components/admin/modal-add-course.html.twig' %}
                 <div class="course-body">
                     <table class="table">
                         <thead>
@@ -54,7 +54,8 @@
                                     <td>{{ course.date|date('M/y') }}</td>
                                     <td>{{ course.duration }}</td>
                                     <td class="action">
-                                        <button class="btn-edit">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+                                        <a class="btn-edit" href="#edit-course-{{ course.id }}">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                                        {% include 'components/admin/modal-edit-course.html.twig' with {'course': course, 'modal_id': 'edit-course-' ~ course.id} %}
                                         <button class="btn-delete"><i class="fa-solid fa-trash-can"></i></i></button>
                                     </td>
                                 </tr>
