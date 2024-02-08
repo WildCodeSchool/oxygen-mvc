@@ -24,7 +24,7 @@ class FormationManager extends AbstractManager
 
         return $statement = $statement->fetchAll();
     }
-    public function SelectOneByDisciplineId(int $id): array|false
+    public function selectOneByDisciplineId(int $id): array|false
     {
         // prepared request
         $statement = $this->pdo->prepare("SELECT * FROM " . static::TABLE . " WHERE discipline_id=:id");
