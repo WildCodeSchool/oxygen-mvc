@@ -106,7 +106,7 @@ class FormationManager extends AbstractManager
 
         $statement->execute();
     }
-    
+
     public function selectOneByDisciplineId(int $id): array|false
     {
         // prepared request
@@ -121,16 +121,16 @@ class FormationManager extends AbstractManager
     {
         // You can start a transaction to ensure atomicity
         $this->pdo->beginTransaction();
-        
+
         try {
             // Delete associated records in the applications table
             $statement = $this->pdo->prepare("DELETE FROM applications WHERE course_id = :id");
             $statement->bindValue(':id', $id, \PDO::PARAM_INT);
             $statement->execute();
-            
+
             // Now delete the course
             $this->delete($id);
-            
+
             $this->pdo->commit();
         } catch (\Exception $e) {
             // Roll back the transaction if an error occurred
