@@ -78,13 +78,3 @@
         </form>
     </div>
 </div>
-<script>
-    function updateImage(url, modalId) {
-        var imgElement = document.querySelector('#' + modalId + ' #preview-image');
-        if (url.trim() === '') {
-            imgElement.src = 'https://placehold.jp/100x100.png';
-        } else {
-            imgElement.src = url;
-        }
-    }
-</script>

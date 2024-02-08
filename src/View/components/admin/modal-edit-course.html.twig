@@ -80,9 +80,3 @@
         </form>
     </div>
 </div>
-<script>
-    function updateImage(url, modalId) {
-        var imgElement = document.querySelector('#' + modalId + ' #preview-image');
-        imgElement.src = url.trim() !== '' ? url : imgElement.dataset.defaultUrl;
-    }
-</script>
