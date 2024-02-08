@@ -27,8 +27,34 @@ class FormationManager extends AbstractManager
     // Insert new course
     public function insert(array $course): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (name, description, capacity, location, date, duration, degree, financing_supported, discipline_id, url_image) 
-            VALUES (:name, :description, :capacity, :location, :date, :duration, :degree, :financing_supported, :discipline_id, :url_image)");
+        $statement = $this->pdo->prepare("
+            INSERT INTO " . self::TABLE . " 
+            (
+                name, 
+                description, 
+                capacity, 
+                location, 
+                date, 
+                duration, 
+                degree, 
+                financing_supported, 
+                discipline_id, 
+                url_image
+            ) 
+            VALUES 
+            (
+                :name, 
+                :description, 
+                :capacity, 
+                :location, 
+                :date, 
+                :duration, 
+                :degree, 
+                :financing_supported, 
+                :discipline_id, 
+                :url_image
+            )
+        ");
 
         $statement->bindValue('name', $course['name'], \PDO::PARAM_STR);
         $statement->bindValue('description', $course['description'] ?? null, \PDO::PARAM_STR);
@@ -48,7 +74,22 @@ class FormationManager extends AbstractManager
     // Update course
     public function update(array $course): void
     {
-        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET name = :name, description = :description, capacity = :capacity, location = :location, date = :date, duration = :duration, degree = :degree, financing_supported = :financing_supported, discipline_id = :discipline_id, url_image = :url_image WHERE id=:id");
+        $statement = $this->pdo->prepare("
+            UPDATE " . self::TABLE . " 
+            SET 
+                name = :name, 
+                description = :description, 
+                capacity = :capacity, 
+                location = :location, 
+                date = :date, 
+                duration = :duration, 
+                degree = :degree, 
+                financing_supported = :financing_supported, 
+                discipline_id = :discipline_id, 
+                url_image = :url_image 
+            WHERE 
+                id = :id
+        ");
 
         $statement->bindValue('id', $course['id'], \PDO::PARAM_INT);
         $statement->bindValue('name', $course['name'], \PDO::PARAM_STR);
