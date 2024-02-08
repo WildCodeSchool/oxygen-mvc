@@ -2,9 +2,9 @@
     <h2>Les élèves d’ Oxygen School temoignent  </h2>
     <div class="splide__track">
         <ul class="splide__list card-review-container">
-            {% for student in students %}
+            {% for review in reviews %}
                 <li class="splide__slide">
-                    {% include 'components/home/card-review.html.twig' with {'student': student} %}
+                    {% include 'components/home/card-review.html.twig' with {'review': review} %}
                 </li>
             {% endfor %}
         </ul>

@@ -2,11 +2,13 @@
     {% block stylesheet %}
     {{ parent() }}
     <link rel="stylesheet" href="/assets/css/discipline.css">
+    <link rel="stylesheet" href="/assets/css/home/hero.css">
     {% endblock %}
 
 {% block title %}Page discipline{% endblock %}
 {% block content %}
  <!-- debut de formation main  -->
+ {% include 'components/home/hero.html.twig' %}
     <main class="main">
         <section class="section grid">
             <h1 class="formation-title">Nos formations</h1>
@@ -25,7 +27,7 @@
                         <li><i class="ri-map-pin-line"></i>{{ course.location}}</li>
                         <li><i class="ri-calendar-2-line"></i>{{ course.date}}</li>
                         <li><i class="ri-graduation-cap-line"></i>{{ course.degree}}</li>
-                        <li><i class="ri-money-euro-circle-line"></i>{{ course.financing_supported}}prise en charge</li>
+                        <li><i class="ri-money-euro-circle-line"></i>{{ course.financing_supported}} % Financée</li>
                     </ul>
                 </div>
             </div>

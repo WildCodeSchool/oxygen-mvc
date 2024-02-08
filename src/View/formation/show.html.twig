@@ -1,13 +1,16 @@
 {% extends 'layout.html.twig' %}
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/formation.css">
-    {{parent()}}
+{% block stylesheet %}
+{{parent()}}
+<link rel="stylesheet" href="/assets/css/home/hero.css">
+<link rel="stylesheet" href="/assets/css/formation.css">
 {% endblock %}
 
 {% block content %}
+ {% include 'components/home/hero.html.twig' %}
     <main>
         <!-- debut de section formation description  -->
         <section class="formation-description grid">
-
+    
     
             <!-- debut de section formation description  -->
             <div class="formation-description-text">
@@ -22,51 +25,53 @@
                 <div><i class="ri-map-pin-line"></i>" {{formation.location}}"</div>
                 <div><i class="ri-calendar-2-line"></i>" {{formation.date}}"</div>
                 <div><i class="ri-graduation-cap-line"></i>" {{formation.degree}}"</div>
-                <div><i class="ri-money-euro-circle-line"></i>" {{formation.financing_supported}}"</div>
+                <div><i class="ri-money-euro-circle-line"></i>" {{formation.financing_supported}}%"</div>
             </div>
             <!-- fin de formation description infos -->
-
+                     <div class="alert-success">{{success}} </div>
             <!-- debut de formation description form -->
             <div class="form">
                 <h2>Inscrivez </h2>
                 <form action="#" method="post">
+                    <!--PRENOM-->
                     <fieldset>
                         <legend>Prenom</legend>
-                        <input type="text" name="name" id="">
+                        <input type="text" required name="name" id="">
                     </fieldset>
+                        <div class="alert-error">{{ errors.name }}</div>
                     <fieldset>
+                    <!--FORMATION NAME HIDDEN -->
+                    <input type="text" name="formation" value=" {{formation.name}}" hidden>
+                    <!--NOM-->
                         <legend>Nom </legend>
-                        <input type="text" name="prenom" id="">
+                        <input type="text" required name="prenom" id="">
                     </fieldset>
-                    <fieldset>
-                        <legend>Date de naissance</legend>
-                        <input type="text" name="name" id="">
-                    </fieldset>
+                        <div class="alert-error">{{ errors.prenom }}</div>
+                    <!--EMAIL-->
                     <fieldset>
                         <legend>Email</legend>
-                        <input type="text" name="name" id="">
+                        <input type="email" required name="email" id="">
                     </fieldset>
+                        <div class="alert-error">{{ errors.email }}</div>
+                    <!--EMAIL-->
                     <fieldset>
                         <legend>Tel</legend>
-                        <input type="text" name="name" id="">
+                        <input type="tel" required name="tel" id=""  pattern="\d{10}" >
                     </fieldset>
-                    <fieldset>
-                        <legend>Sex</legend>
-                        <input type="text" name="name" id="">
-                    </fieldset>
+                        <div class="alert-error">{{ errors.tel }}</div>
+                    <!--NIVEAU DETUDES-->
                     <fieldset>
                         <legend>Niveau detudes</legend>
-                        <input type="text" name="name" id="">
+                        <input type="text" required name="niveau" id="">
                     </fieldset>
-                    <fieldset>
-                        <legend>Message</legend>
-                        <textarea name="message" id="" cols="30" rows="10">
-            
-                        </textarea>
-                    </fieldset>
+                        <div class="alert-error">{{ errors.niveau }}</div>
                     <input type="submit" value="S'inscrire">
                 </form>
+               
             </div>
+            <pre>
+                
+            </pre>
             <!-- fin de formation description form -->
         </section>
     </main>

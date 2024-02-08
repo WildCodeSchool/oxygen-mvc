@@ -24,12 +24,12 @@ class HomeController extends AbstractController
         $studentManager = new StudentManager();
 
         // Get all student reviews with associated student data
-        $students = $studentManager->getAllStudents();
+        $reviews = $studentManager->getStudentReviews();
 
         return $this->twig->render('Home/index.html.twig', [
             'name' => $name,
             'disciplines' => $disciplines,
-            'students' => $students,
+            'reviews' => $reviews,
         ]);
     }
 }

@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+    {% block title %} Oxygen: Admin{% endblock %}
+    {% block stylesheet %}
+        {{ parent() }}
+        <link rel="stylesheet" href="/assets/css/admin/main-admin.css">
+    {% endblock %}
+{% block content %}
+    <section class="main-admin">
+        <div class="main-das">
+            {% include 'components/admin/nav-das.html.twig' %}
+            <h1>This is discipline</h1>
+        </div>
+    </section>
+{% endblock %}

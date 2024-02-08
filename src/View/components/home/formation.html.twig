@@ -1,7 +1,9 @@
-<section class="formation">
-    <div class="card-container">
+<section class="swiper2 formation">
+    <div class="swiper-wrapper card-container">
         {% for discipline in disciplines %}
-            {% include 'components/home/card-dis.html.twig' with {'discipline': discipline} %}
+            <div class="swiper-slide">
+                {% include 'components/home/card-dis.html.twig' with {'discipline': discipline} %}
+            </div>
         {% endfor %}
     </div>
 </section>
