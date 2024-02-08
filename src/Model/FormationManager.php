@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Model;
+
 use PDO;
+
 class FormationManager extends AbstractManager
 {
     public const TABLE = 'Course';
