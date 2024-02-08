@@ -32,7 +32,7 @@
             <!-- debut de formation description form -->
             <div class="form">
                 <h2>Inscrivez </h2>
-                <form action="#" method="post">
+                <form action="#" method="post" novalidate="novalidate">
                     <!--PRENOM-->
                     <fieldset>
                         <legend>Prenom</legend>
@@ -67,11 +67,7 @@
                         <div class="alert-error">{{ errors.niveau }}</div>
                     <input type="submit" value="S'inscrire">
                 </form>
-               {% if errors is empty %}
-                    <div class="alert alert-success">
-                        Your form has been submitted successfully!
-                    </div>
-                {% endif %}
+               {{success}}
             </div>
             <pre>
                 

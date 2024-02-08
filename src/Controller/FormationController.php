@@ -59,18 +59,14 @@ class FormationController extends AbstractController
 
             if (empty($errors)) {
                 $studentsmanager->insert($student);
-                $success = 'Votre inscription a été validée avec succès.';
+                $_SESSION['success'] = 'Votre inscription a été validée avec succès.';
                 header('Location:/formation?id=' . $id);
                 exit();
-            } else {
-                return $this->twig->render('formation/show.html.twig', [
-                    'formation' => $formations,
-                    'errors' => $errors,
-                ]);
             }
         }
 
-
+        $success = $_SESSION['success'] ?? null;
+        unset($_SESSION['success']);
         return $this->twig->render('formation/show.html.twig', [
             'formation' => $formations,
             'success' => $success,
