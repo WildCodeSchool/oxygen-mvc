@@ -78,7 +78,7 @@ class FormationController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = trim($_POST['id']);
             $formationManager = new FormationManager();
-            $formationManager->delete((int) $id);
+            $formationManager->deleteWithCascade((int) $id); // Call the new deleteWithCascade method
             header('Location:/admin/formation');
         }
     }
