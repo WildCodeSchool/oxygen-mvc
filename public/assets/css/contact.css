@@ -103,19 +103,100 @@
     background-color: #f4f9f9;
 }
 
-.input_form {
-    border: 2px solid rgb(173, 218, 247);
+/* css formu */
+
+.form {
     width: 100%;
-    padding-left: 1rem;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 4px;
-
-
-
+    margin: 0 auto;
 }
 
+form {
+    display: grid;
+    gap: 1.8rem;
+}
+
+form input {
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    background-color: #f7f7f7;
+}
+
+form fieldset {
+    padding: 1rem;
+    border: 1px solid #23A6F0;
+}
+
+form fieldset legend {
+    position: relative;
+    padding-right: 3.5rem;
+    left: 2rem;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #67c6fd;
+    width: 140px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--white-color);
+    font-weight: var(--font-weight);
+    margin: 0 auto;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, padding 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #57bffb;
+    box-shadow: 3px 5px 5px 0px rgb(189, 188, 188);
+    cursor: pointer;
+    padding: 11px;
+}
+
+form fieldset textarea {
+    text-align: left;
+    border: none;
+    resize: none;
+    width: 100%;
+    overflow: auto;
+    background-color: var(--primary-color);
+}
+
+form fieldset:focus {
+    border: 3px solid black;
+}
+
+form fieldset textarea:focus {
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.error {
+    color: red;
+    border-bottom: 50%;
+}
+
+.validForm {
+    color: green;
+    margin: 0 auto;
+    border-bottom: 50%;
+}
+
+/*.input_form {
+border: 2px solid rgb(173, 218, 247);
+width: 100%;
+padding-left: 1rem;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border-radius: 4px;
+}
 .label {
     font-size: 20px;
     font-style: italic;
@@ -126,7 +207,7 @@
     margin-top: 2rem;
     padding-right: 3rem;
 
-}
+}*/
 
 ::placeholder {
     color: rgb(171, 171, 220);
@@ -134,6 +215,8 @@
     font-style: oblique;
 
 }
+
+/*
 
 .button {
     display: inline-block;
@@ -195,7 +278,7 @@
     font-family: Tahoma;
 
 }
-
+*/
 
 
 
