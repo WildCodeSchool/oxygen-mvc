@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="/assets/css/admin/main-admin.css">
         <link rel="stylesheet" href="/assets/css/admin/course.css">
         <link rel="stylesheet" href="/assets/css/admin/table.css">
+        <link rel="stylesheet" href="/assets/css/admin/modal-course.css">
     {% endblock %}
 {% block content %}
     <section class="main-admin">
@@ -27,8 +28,9 @@
                     </form>
                 </div>
                 <div class="add-course">
-                    <button class="btn-add"><i class="fa-solid fa-circle-plus"></i></i>Create</button>
+                    <a class="btn-add" href="#add-course"><i class="fa-solid fa-circle-plus"></i></i>Create</a>
                 </div>
+                {% include 'components/admin/modal-add-course.html.twig' %}
                 <div class="course-body">
                     <table class="table">
                         <thead>
@@ -52,9 +54,8 @@
                                     <td>{{ course.date|date('M/y') }}</td>
                                     <td>{{ course.duration }}</td>
                                     <td class="action">
-                                        <button class="btn-edit">Edit <i class="fa-solid fa-pen-to-square"></i></button>
-                                         <form action="/admin/formation/delete" method="post">
-                                        <input type="hidden" name="id" value="{{ course.id }}">
+                                        <a class="btn-edit" href="#edit-course-{{ course.id }}">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                                        {% include 'components/admin/modal-edit-course.html.twig' with {'course': course, 'modal_id': 'edit-course-' ~ course.id} %}
                                         <button class="btn-delete"><i class="fa-solid fa-trash-can"></i></i></button>
                                     </form>
                                     </td>
