@@ -38,7 +38,7 @@ class FormationController extends AbstractController
                 'message' => 'Le numero de telephone fourni nest pas valide.',
             ],
             'niveau' => [
-                'pattern' => "/^[a-zA-Z0-9-' ]*$/",
+                'pattern' => "/^[a-zA-Z0-9-' +\-*=\s]*$/",
                 'message' => 'Le niveau fourni nest pas valide.',
             ],
             ];
