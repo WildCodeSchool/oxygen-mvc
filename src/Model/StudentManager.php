@@ -53,4 +53,20 @@ class StudentManager extends AbstractManager
 
         return $messages;
     }
+
+    /**
+     * Get the all student reviews with associated student
+     */
+    public function getStudentReviews(): array
+    {
+        $query = 'SELECT sr.*, s.firstName, s.lastName, s.avatar_image
+                      FROM student_reviews sr
+                      JOIN student s ON sr.student_id = s.id
+                      ORDER BY id DESC;';
+
+        $statement = $this->pdo->query($query);
+        $reviews = $statement->fetchAll(\PDO::FETCH_ASSOC);
+
+        return $reviews;
+    }
 }
