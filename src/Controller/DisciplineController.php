@@ -13,7 +13,7 @@ class DisciplineController extends AbstractController
     {
         $id = $_GET['id'];
         $coursesMananager = new FormationManager();
-        $courses = $coursesMananager->selectOneById($id);
+        $courses = $coursesMananager->SelectOneByDisciplineId ($id);
 
         return $this->twig->render('discipline/index.html.twig', [
             'courses' => $courses,
