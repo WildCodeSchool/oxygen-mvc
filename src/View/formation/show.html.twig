@@ -32,12 +32,13 @@
             <!-- debut de formation description form -->
             <div class="form">
                 <h2>Inscrivez </h2>
-                <form action="#" method="post" novalidate="novalidate">
+                <form action="#" method="post">
                     <!--PRENOM-->
                     <fieldset>
                         <legend>Prenom</legend>
                         <input type="text" required name="name" id="">
                     </fieldset>
+                        <div class="alert-error">{{ errors.name }}</div>
                     <fieldset>
                     <!--FORMATION NAME HIDDEN -->
                     <input type="text" name="formation" value=" {{formation.name}}" hidden>
@@ -45,48 +46,37 @@
                         <legend>Nom </legend>
                         <input type="text" required name="prenom" id="">
                     </fieldset>
+                        <div class="alert-error">{{ errors.prenom }}</div>
                     <!--EMAIL-->
                     <fieldset>
                         <legend>Email</legend>
                         <input type="email" required name="email" id="">
                     </fieldset>
+                        <div class="alert-error">{{ errors.email }}</div>
                     <!--EMAIL-->
                     <fieldset>
                         <legend>Tel</legend>
                         <input type="tel" required name="tel" id=""  pattern="\d{10}" >
                     </fieldset>
+                        <div class="alert-error">{{ errors.tel }}</div>
                     <!--NIVEAU DETUDES-->
                     <fieldset>
                         <legend>Niveau detudes</legend>
                         <input type="text" required name="niveau" id="">
                     </fieldset>
+                        <div class="alert-error">{{ errors.niveau }}</div>
                     <input type="submit" value="S'inscrire">
                 </form>
-               
+               {% if errors is empty %}
+                    <div class="alert alert-success">
+                        Your form has been submitted successfully!
+                    </div>
+                {% endif %}
             </div>
+            <pre>
+                
+            </pre>
             <!-- fin de formation description form -->
         </section>
     </main>
-{% endblock %}
-{% block javascript %}
-    <script>
-        var success = "{{ success|default('') }}";
-        var errors = JSON.parse('{{ errors|json_encode|default('{}')|escape('js') }}');
-        var errorMessages = [];
-
-        if (success) {
-            alert(success);
-        }
-
-        for (var key in errors) {
-            if (errors.hasOwnProperty(key)) {
-                errorMessages.push(errors[key]);
-            }
-        }
-
-        if (errorMessages.length > 0) {
-            alert(errorMessages.join('\n'));
-        }
-    </script>
-    <script src="/assets/js/formationScript.js"></script>
 {% endblock %}

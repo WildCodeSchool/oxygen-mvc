@@ -167,6 +167,17 @@ form fieldset textarea:focus {
     font-size: 1rem;
 }
 
+.alert-error {
+    color: red;
+    border-bottom: 50%;
+}
+
+.alert-success {
+    color: green;
+    margin: 0 auto;
+    border-bottom: 50%;
+}
+
 
 /* css fomulaire finish */
 
