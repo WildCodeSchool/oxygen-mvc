@@ -146,12 +146,19 @@ footer .footer {
         padding: 1rem 0;
         height: auto;
     }
+
     footer p {
         padding: 10px;
     }
+
     .footer-title {
         text-align: center;
     }
+
+    .form-footer {
+        display: none;
+    }
+
     .footer-cards {
         display: grid;
         gap: 10px;
@@ -159,6 +166,8 @@ footer .footer {
         align-items: center;
         justify-content: center;
     }
+
+
 }
 
 @media screen and (max-width: 850px) {
@@ -169,16 +178,26 @@ footer .footer {
         padding: 1rem 0;
         height: auto;
     }
+
     .footer-cards {
         display: none;
     }
+
     #social {
         display: flex;
         flex-wrap: wrap;
     }
+
     .picture {
         margin: 0 auto;
     }
+
+    .form-footer {
+        display: none;
+    }
+
+
+
 }
 
 
@@ -208,4 +227,8 @@ footer .footer {
 
 .back-to-top i {
     font-size: 1.5rem;
+}
+
+.form-footer {
+    display: none;
 }

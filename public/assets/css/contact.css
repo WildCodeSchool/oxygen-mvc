@@ -42,9 +42,7 @@
 
 
 .info {
-    display: flex;
-    flex-direction: colomn;
-    gap: 3rem;
+
     width: 70%;
     border: solid #32a1ce;
     border-radius: 90px;
@@ -52,7 +50,6 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     padding-left: 10rem;
-    padding-right: 3rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
     font-size: 20px;
@@ -205,9 +202,18 @@ form fieldset textarea:focus {
 
 }
 
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    .info {
 
+        width: 100%;
+        padding-left: 1rem;
+        border: none;
+        font-size: 18px;
+        background-color: var(--secondaryColor);
+    }
+}
 
-@media screen and (min-width: 200px) and (max-width: 1050px) {
+@media screen and (min-width: 200px) and (max-width: 800px) {
 
     * {
         margin: 0;
@@ -238,6 +244,10 @@ form fieldset textarea:focus {
     .info {
 
         width: 100%;
+        padding-left: 1rem;
+        border: none;
+        font-size: 18px;
+        background-color: var(--secondaryColor);
     }
 
     .team {
