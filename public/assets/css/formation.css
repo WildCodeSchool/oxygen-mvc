@@ -21,6 +21,10 @@
     gap: 1.8rem;
 }
 
+main {
+    margin-top: 4rem;
+}
+
 .formation-description {
     margin: 3rem auto;
 }
@@ -187,6 +191,10 @@ form fieldset textarea:focus {
 @media screen and (min-width: 350px) and (max-width: 550px) {
     .grid {
         gap: 1rem;
+    }
+
+    main {
+        margin-top: 2rem;
     }
 
     .formation-description-text {
